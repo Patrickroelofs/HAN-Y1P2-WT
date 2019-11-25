@@ -291,7 +291,7 @@ hr{
     display: none;
     position: absolute;
     left: 15px;
-    top: 25px;
+    top: 32px;
 }
 .menu--icon svg{
     fill: var(--text-color);
