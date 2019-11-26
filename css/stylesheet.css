@@ -64,7 +64,7 @@ body, html {
 
 h1, h2, h3, h4, h5, h6 {
 	color: var(--text-color);
-	font-family: 'Work Sans', serif;
+	font-family: 'Work Sans', 'Open Sans', sans-serif;
 }
 
 ul, li {
@@ -108,7 +108,7 @@ main {
 }
 
 hr {
-	border: 1px solid rgba(41, 252, 165, 1);
+	border: 1px solid var(--theme-color);
 }
 
 /* ==========================================================================
@@ -116,7 +116,7 @@ hr {
    ========================================================================== */
 
 .button {
-	font-family: 'Work Sans', serif;
+	font-family: 'Work Sans', 'Open Sans', sans-serif;
 	display: inline-block;
 	font-size: 1.5em;
 	padding: 8px 12px;
@@ -130,7 +130,7 @@ hr {
 
 .button--green {
 	color: var(--text-color);
-	background: rgba(41, 252, 165, 1);
+	background: var(--theme-color);
 	transition: all 0.3s ease-in-out;
 }
 
@@ -168,7 +168,7 @@ hr {
 .footer {
 	text-align: center;
 	width: 100%;
-	background: rgba(41, 252, 165, 1);
+	background: var(--theme-color);
 }
 
 .footer__contact {
@@ -178,7 +178,7 @@ hr {
 .footer__title {
 	font-size: 4em;
 	padding: 16px 0;
-	font-family: 'Work Sans', serif;
+	font-family: 'Work Sans', 'Open Sans', sans-serif;
 }
 
 .footer__subtitle {
@@ -201,7 +201,7 @@ hr {
 
 .footer__social a {
 	font-size: 2em;
-	fill: rgba(41, 252, 165, 1);
+	fill: var(--theme-color);
 	-webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
@@ -215,7 +215,7 @@ hr {
 .footer__copyright {
 	color: white;
 	padding: 32px 0;
-	font-family: 'Work Sans', serif;
+	font-family: 'Work Sans', 'Open Sans', sans-serif;
 	font-size: 1.2em;
 	background: black;
 }
@@ -235,6 +235,10 @@ hr {
 	width: 50%;
 	font-size: 1em;
 	align-self: center;
+}
+
+.nav__logo h1{
+	display: inline;
 }
 
 .nav__navigation {
@@ -276,7 +280,7 @@ hr {
 	height: 7px;
 	bottom: 2px;
 	left: 0;
-	background-color: rgba(41, 252, 165, 1);
+	background-color: var(--theme-color);
 	z-index: -1;
 }
 
@@ -335,7 +339,7 @@ hr {
 .header__blocktext {
 	display: inline-block;
 	position: relative;
-	background: #29FCA5;
+	background: var(--theme-color);
 }
 
 .header__blocktext h2 {
@@ -422,7 +426,7 @@ hr {
 
 .projectthumb__button {
 	display: block;
-	color: rgba(41, 252, 165, 1);
+	color: var(--theme-color);
 	font-weight: bold;
 	padding: 12px 0;
 }
@@ -512,7 +516,7 @@ hr {
 
 .about__image img {
 	width: 370px;
-	background: rgba(41, 252, 165, 1);
+	background: var(--theme-color);
 }
 
 /* ==========================================================================
@@ -558,17 +562,17 @@ hr {
 
 input {
 	background: transparent;
-	box-shadow: 5px 5px 0px 2px rgba(41, 252, 165, 1);
+	box-shadow: 5px 5px 0px 2px var(--theme-color);
 	border: 5px solid black;
 	padding: 16px 8px;
 	font-size: 1.2em;
-	font-family: 'Work Sans', sans-serif;
+	font-family: 'Work Sans', 'Open Sans', sans-serif;
 	color: var(--text-color);
 }
 
 input::placeholder {
 	font-size: 0.8em;
-	font-family: 'Work Sans', sans-serif;
+	font-family: 'Work Sans', 'Open Sans', sans-serif;
 	color: var(--text-color);
 	opacity: 0.65;
 }
@@ -579,7 +583,7 @@ input:focus::placeholder {
 
 textarea {
 	background: transparent;
-	box-shadow: 5px 5px 0px 2px rgba(41, 252, 165, 1);
+	box-shadow: 5px 5px 0px 2px var(--theme-color);
 	border: 5px solid black;
 	padding: 16px 8px;
 	resize: none;
@@ -799,7 +803,7 @@ textarea {
 	height: 7px;
 	bottom: 2px;
 	left: 0;
-	background-color: rgba(41, 252, 165, 1);
+	background-color: var(--theme-color);
 	z-index: -1;
 }
 
