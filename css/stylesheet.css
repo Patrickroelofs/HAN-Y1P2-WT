@@ -1063,6 +1063,9 @@ textarea {
 	.skills {
 		background: #333333;
 	}
+	.skills__list li{
+		color: black;
+	}
 	.nav--icon:checked~.menu--icon svg {
 		fill: black;
 	}
@@ -1072,5 +1075,9 @@ textarea {
 	.nav--icon:checked~.menu--icon .line {
 		fill: transparent;
 		stroke: black;
+	}
+	input, textarea{
+		box-shadow: none;
+		border: 2px solid var(--theme-color);
 	}
 }
