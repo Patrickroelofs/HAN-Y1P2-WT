@@ -641,6 +641,13 @@ select{
 	color: var(--text-color);
 }
 
+.skills__person {
+	width: 240px;
+	position: absolute;
+	top: -80%;
+	right: 100px;
+}
+
 .experiences {
 	max-width: 1200px;
 	margin: 0 auto;
