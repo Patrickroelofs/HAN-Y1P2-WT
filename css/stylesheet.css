@@ -629,13 +629,6 @@ textarea {
 	color: var(--text-color);
 }
 
-.skills__person {
-	width: 240px;
-	position: absolute;
-	top: -80%;
-	right: 100px;
-}
-
 .experiences {
 	max-width: 1200px;
 	margin: 0 auto;
@@ -816,9 +809,6 @@ textarea {
 		left: 0;
 		padding: 32px;
 		font-size: 1.8em;
-	}
-	.skills__person {
-		display: none;
 	}
 	.skills {
 		margin: 0 12px;
