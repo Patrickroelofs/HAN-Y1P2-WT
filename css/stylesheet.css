@@ -592,6 +592,18 @@ textarea {
 	color: var(--text-color);
 }
 
+select{
+	width: 100%;
+	background: transparent;
+	box-shadow: 5px 5px 0px 2px var(--theme-color);
+	border: 5px solid black;
+	padding: 16px 8px;
+	resize: none;
+	font-size: 1em;
+	font-family: 'Work Sans', sans-serif;
+	color: var(--text-color);
+}
+
 /* ==========================================================================
     ABOUT PAGE
    ========================================================================== */
