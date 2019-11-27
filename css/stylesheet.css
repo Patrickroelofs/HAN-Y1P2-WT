@@ -661,6 +661,7 @@ select{
 
 .experiences__double>div {
 	padding: 0 32px;
+	width: 50%;
 }
 
 .experiences__title, .me__title {
@@ -881,6 +882,9 @@ select{
 	}
 	.experiences__double {
 		display: block;
+	}
+	.experiences__double>div{
+		width: 100%;
 	}
 	.skills__text {
 		font-size: 1em;
