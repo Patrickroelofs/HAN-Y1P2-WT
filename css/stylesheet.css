@@ -637,6 +637,7 @@ select {
 	animation-duration: 7s;
 	animation-iteration-count: infinite;
 	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
 	clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
 	transform: translateY(-50px);
 	opacity: 0;
