@@ -653,6 +653,7 @@ select{
 	margin: 0 auto;
 	padding: 0 0 128px 0;
 	color: var(--text-color);
+	position: relative;
 }
 
 .experiences__double {
@@ -1129,5 +1130,17 @@ select{
 	input, textarea{
 		box-shadow: none;
 		border: 2px solid var(--theme-color);
+	}
+	select{
+		background: transparent;
+		box-shadow: none;
+		border: 2px solid var(--theme-color);
+	}
+	option{
+		background: var(--theme-color);
+		color: black;
+	}
+	.project__info span{
+		color: white;
 	}
 }
