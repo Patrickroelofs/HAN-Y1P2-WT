@@ -237,7 +237,7 @@ hr {
 	align-self: center;
 }
 
-.nav__logo h1{
+.nav__logo h1 {
 	display: inline;
 }
 
@@ -592,7 +592,7 @@ textarea {
 	color: var(--text-color);
 }
 
-select{
+select {
 	width: 100%;
 	background: transparent;
 	box-shadow: 5px 5px 0px 2px var(--theme-color);
@@ -632,6 +632,58 @@ select{
 	margin: 16px 0;
 	color: var(--text-color);
 	background: var(--theme-color);
+	animation-name: skillsAnimation;
+	animation-timing-function: ease;
+	animation-duration: 7s;
+	animation-iteration-count: infinite;
+	-webkit-animation-fill-mode: forwards;
+	clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+	transform: translateY(-50px);
+	opacity: 0;
+}
+
+.skills__list li:nth-child(1) {
+	animation-delay: 0s;
+}
+
+.skills__list li:nth-child(2) {
+	animation-delay: 0.5s;
+}
+
+.skills__list li:nth-child(3) {
+	animation-delay: 1s;
+}
+
+.skills__list li:nth-child(4) {
+	animation-delay: 1.5s;
+}
+
+@keyframes skillsAnimation {
+	0% {
+		transform: translateY(-50px);
+		opacity: 0;
+		clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+	}
+	10%{
+		transform: translateY(0);
+		opacity: 1;
+		clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+	}
+	50%{
+		transform: translateY(0);
+		opacity: 1;
+		clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+	}
+	80%{
+		transform: translateY(0);
+		opacity: 1;
+		clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+	}
+	100% {
+		transform: translateY(50px);
+		opacity: 0;
+		clip-path: polygon(100% 100%, 0 100%, 0 100%, 100% 100%);
+	}
 }
 
 .skills__text {
@@ -821,22 +873,22 @@ select{
 	z-index: -1;
 }
 
-.project__info{
+.project__info {
 	padding-top: 128px;
 	display: flex;
 	text-align: center;
 }
 
-.project__info > div{
+.project__info>div {
 	width: 33.33%;
 }
 
-.project__info p{
+.project__info p {
 	font-size: 1.2em;
 	font-weight: bold;
 }
 
-.project__info span{
+.project__info span {
 	display: block;
 	margin: 12px 0;
 }
@@ -845,7 +897,7 @@ select{
 		TABLET
 	 ========================================================================== */
 
-@media screen and (max-width: 1100px) {
+@media only screen and (max-width: 1100px) {
 	.skills__list {
 		left: 0;
 		padding: 32px;
@@ -858,12 +910,12 @@ select{
 	.skills__list {
 		font-size: 1.2em;
 	}
-	.skills__person{
+	.skills__person {
 		display: none;
 	}
 }
 
-@media screen and (max-width: 1000px) {
+@media only screen and (max-width: 1000px) {
 	.nav {
 		justify-content: center;
 		padding: 50px 24px;
@@ -884,7 +936,7 @@ select{
 	.experiences__double {
 		display: block;
 	}
-	.experiences__double>div{
+	.experiences__double>div {
 		width: 100%;
 	}
 	.skills__text {
@@ -970,7 +1022,7 @@ select{
 		Phone Layout
 	 ========================================================================== */
 
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
 	main {
 		margin-top: 94px;
 	}
@@ -1080,16 +1132,16 @@ select{
 	}
 }
 
-@media screen and (max-width: 425px){
-	.project__info{
+@media only screen and (max-width: 425px) {
+	.project__info {
 		padding-top: 32px;
 		display: block;
 	}
-	.project__info > div{
+	.project__info>div {
 		width: 100%;
 		margin: 32px 0;
 	}
-	.nav__logo{
+	.nav__logo {
 		width: 100%;
 	}
 }
@@ -1114,7 +1166,7 @@ select{
 	.skills {
 		background: #333333;
 	}
-	.skills__list li{
+	.skills__list li {
 		color: black;
 	}
 	.nav--icon:checked~.menu--icon svg {
@@ -1127,20 +1179,20 @@ select{
 		fill: transparent;
 		stroke: black;
 	}
-	input, textarea{
+	input, textarea {
 		box-shadow: none;
 		border: 2px solid var(--theme-color);
 	}
-	select{
+	select {
 		background: transparent;
 		box-shadow: none;
 		border: 2px solid var(--theme-color);
 	}
-	option{
+	option {
 		background: var(--theme-color);
 		color: black;
 	}
-	.project__info span{
+	.project__info span {
 		color: white;
 	}
 }
