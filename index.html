@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Home | Patrick Roelofs</title>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	
+	<meta name="author" content="Patrick Roelofs">
+	<meta name="description" content="Patrick Roelofs is student, designer and developer in the Netherlands.">
+	<meta name="keywords" content="Developer, Designer, Interaction, UX, Webdeveloper, HTML, CSS, PHP, JS">
+
+	<link rel="stylesheet" type="text/css" href="css/stylesheet-min.css">
+</head>
+
+<body>
+
+	<nav>
+		<div class="container container--large nav">
+			<input class="nav--icon" type="checkbox" id="menu-btn" />
+			<label class="menu--icon" for="menu-btn">
+				<svg viewbox="0 0 100 100" width="64">
+					<path class="line top"
+						d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20">
+					</path>
+					<path class="line middle" d="m 30,50 h 40"></path>
+					<path class="line bottom"
+						d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20">
+					</path>
+				</svg>
+			</label>
+			<div class="nav__logo">
+				<a href="index.html">
+					<h1>Patrick Roelofs</h1>
+				</a>
+			</div>
+			<div class="nav__navigation">
+				<ul>
+					<li><a href="index.html" class="nav__link nav--active">Home</a></li>
+					<li><a href="about.html" class="nav__link">About</a></li>
+					<li><a href="projects.html" class="nav__link">Projects</a></li>
+					<li><a href="contact.html" class="nav__link">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<header class="header">
+		<div class="container container--large">
+			<div class="header__blocktext">
+				<h2>I design and develop cool things.</h2>
+			</div>
+			<p class="header__text">
+				I am a student, designer and developer in the Netherlands. I build digital experiences with an emphasis
+				on usability and design.
+			</p>
+		</div>
+	</header>
+
+	<main>
+		<section id="projects">
+			<div class="container container--large">
+				<div class="projects">
+					<div class="projects__column column--left">
+						<h3>Projects</h3>
+						<a href="project.html" class="projectthumb">
+							<figure>
+								<img src="images/thumbnails/thumbnail_energy.jpg" alt="placeholder">
+								<figcaption>
+									<span class="projectthumb__category">UX Prototype</span>
+									<span class="projectthumb__title">Energy Challenge</span>
+									<p class="projectthumb__description">This project is about the course 'Interaction 4
+										Mobile'. Our task: Work on a major consumer mobile platform for an energy
+										company.</p>
+									<span class="projectthumb__button">View Project</span>
+								</figcaption>
+							</figure>
+						</a>
+						<div class="projectthumb__textblock">
+							<p>I got loads more projects that i’ve done, come check em out!</p>
+							<a class="button button--green" href="projects.html">View more cool projects.</a>
+						</div>
+					</div>
+
+					<div class="projects__column column--right">
+						<a href="project.html" class="projectthumb">
+							<figure>
+								<img src="images/thumbnails/thumbnail_honig.jpg" alt="placeholder">
+								<figcaption>
+									<span class="projectthumb__category">Back-end System</span>
+									<span class="projectthumb__title">Honigevents</span>
+									<p class="projectthumb__description">Honigevents is an event management system for
+										the company HonigEvents who organize events at the Honigcomplex in Nijmegen, The
+										Netherlands.</p>
+									<span class="projectthumb__button">View Project</span>
+								</figcaption>
+							</figure>
+						</a>
+						<a href="project.html" class="projectthumb">
+							<figure>
+								<img src="images/thumbnails/thumbnail_nzayi.jpg" alt="placeholder">
+								<figcaption>
+									<span class="projectthumb__category">Website</span>
+									<span class="projectthumb__title">Nzayi</span>
+									<p class="projectthumb__description">Nzayi is a design bureau in Angola, their site
+										was designed by Vladimir da Costa and developed by me.</p>
+									<span class="projectthumb__button">View Project</span>
+								</figcaption>
+							</figure>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="about">
+			<div class="container">
+				<div class="about">
+					<div class="about__text">
+						<div>
+							<svg width="52" height="48" viewbox="0 0 52 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M24.7835 41.1594L16.5014 45.9278C16.0622 46.1788 15.874 46.7435 16.1249 47.1827C16.3132 47.4964 16.6269 47.6846 16.9406 47.6846C17.1288 47.6846 17.2543 47.6219 17.3798 47.5592L25.4736 42.9162C25.5364 42.9162 25.5991 42.9789 25.7246 42.9789C25.8501 42.9789 25.9128 42.9789 25.9756 42.9162L34.0694 47.5592C34.1949 47.6219 34.3831 47.6846 34.5086 47.6846C34.8223 47.6846 35.1361 47.4964 35.3243 47.1827C35.5753 46.7435 35.4498 46.1788 34.9478 45.9278L26.6658 41.1594V37.0183H47.9984C49.8806 37.0183 51.4492 35.4498 51.4492 33.5675V3.45086C51.4492 1.56857 49.8806 0 47.9984 0H3.45086C1.56857 0 0 1.56857 0 3.45086V33.5675C0 35.4498 1.56857 37.0183 3.45086 37.0183H24.7835V41.1594ZM1.88229 33.5675V3.45086C1.88229 2.57246 2.57246 1.88229 3.45086 1.88229H47.9984C48.8768 1.88229 49.5669 2.57246 49.5669 3.45086V33.5675C49.5669 34.4459 48.8768 35.1361 47.9984 35.1361H3.45086C2.57246 35.1361 1.88229 34.4459 1.88229 33.5675Z"
+									fill="#FD5AE8" />
+								<path class="svg-line"
+									d="M10.2898 12.8623H23.5913C24.0932 12.8623 24.5324 12.4231 24.5324 11.9211C24.5324 11.4192 24.0932 10.98 23.5913 10.98H10.2898C9.78783 10.98 9.34863 11.4192 9.34863 11.9211C9.34863 12.4231 9.72509 12.8623 10.2898 12.8623Z"
+									fill="#FD5AE8" />
+								<path class="svg-line"
+									d="M41.1593 17.2543H10.2898C9.78783 17.2543 9.34863 17.6935 9.34863 18.1954C9.34863 18.6974 9.78783 19.1366 10.2898 19.1366H41.1593C41.6613 19.1366 42.1005 18.6974 42.1005 18.1954C42.1005 17.6935 41.724 17.2543 41.1593 17.2543Z"
+									fill="#FD5AE8" />
+								<path class="svg-line"
+									d="M41.1593 23.5286H10.2898C9.78783 23.5286 9.34863 23.9678 9.34863 24.4697C9.34863 24.9717 9.78783 25.4109 10.2898 25.4109H41.1593C41.6613 25.4109 42.1005 24.9717 42.1005 24.4697C42.1005 23.9678 41.724 23.5286 41.1593 23.5286Z"
+									fill="#FD5AE8" />
+							</svg>
+							<h3>Developer</h3>
+							<p>
+								I’m a self taught developer currently studying IT with a broad range of subjects in the
+								development field!
+							</p>
+						</div>
+
+						<div>
+							<svg width="60" height="60" viewbox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M30 9.95508C20.9143 9.95508 14.3511 16.7265 13.3102 24C12.6613 28.849 14.2286 33.5755 17.4857 37.151C20.3511 40.2122 21.9184 44.302 21.9184 48.5143L21.9062 55.151C21.9062 57.8326 24.1225 60 26.8653 60H33.2572C36 60 38.2164 57.8326 38.2164 55.151L38.2286 48.5143C38.2286 44.1796 39.6613 40.2122 42.4041 37.4081C45.4041 34.3469 46.9715 30.3918 46.9715 26.302C46.9592 17.2285 39.2572 9.95508 30 9.95508ZM35.7306 55.151C35.7306 56.4245 34.6898 57.453 33.3796 57.453H26.9878C25.6776 57.453 24.6368 56.4367 24.6368 55.151V52.2122H35.7184V55.151H35.7306ZM40.5796 35.6204C37.3225 38.9388 35.6204 43.5306 35.6204 48.5143V49.6653H24.5388V48.5143C24.5388 43.7877 22.5796 39.0734 19.3225 35.4979C16.4572 32.4367 15.2817 28.4816 15.796 24.3918C16.7143 18.2694 22.4082 12.5143 30.0123 12.5143C37.9715 12.5143 44.3633 18.7714 44.3633 26.302C44.3633 29.7428 43.0531 33.0612 40.5796 35.6204Z"
+									fill="#FF4242" />
+								<path class="svg-line" d="M6.39184 27.5756H0V30.1347H6.39184V27.5756Z" fill="#FF4242" />
+								<path class="svg-line" d="M9.68573 7.4939L7.849 9.31839L12.3184 13.6163L14.1429 11.7919L9.68573 7.4939Z"
+									fill="#FF4242" />
+								<path class="svg-line" d="M31.298 0H28.6898V6.12245H31.298V0Z" fill="#FF4242" />
+								<path class="svg-line"
+									d="M45.8081 11.8041L47.6326 13.6286L52.102 9.33059L50.2652 7.5061L45.8081 11.8041Z" fill="#FF4242" />
+								<path class="svg-line" d="M60 27.5756H53.6082V30.1347H60V27.5756Z" fill="#FF4242" />
+							</svg>
+							<h3>UX-Designer</h3>
+							<p>
+								I studied design for 6 years, during high school and a few years in College here I had a
+								focus on UX Design and learned a lot.
+							</p>
+						</div>
+					</div>
+					<div class="about__image">
+						<h3>This is me.</h3>
+						<svg class="arrow" width="156" height="153" viewbox="0 0 156 153" fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M155.502 139.217C152.52 130.043 147.933 121.328 144.034 112.612C143.575 111.466 141.74 111.466 141.052 112.154C137.153 116.282 132.796 120.41 130.272 125.456H130.043C102.062 127.52 74.9984 103.667 55.7328 86.2367C33.4855 66.283 13.3025 41.9716 5.27512 12.8438C4.81641 9.17412 4.35771 5.27512 4.35771 1.37612C4.35771 -0.458706 1.83482 -0.458706 1.60547 1.37612C1.60547 2.06418 1.60547 2.75224 1.60547 3.44029C0.688059 3.44029 0 4.12835 0 5.27512C0.229353 7.798 0.917412 10.3209 1.37612 12.8438C3.21094 74.9984 65.1362 134.86 125.685 138.759C123.621 142.428 121.787 146.327 119.493 149.997C118.346 151.602 120.181 153.207 121.787 152.978C133.254 151.373 143.575 145.868 154.126 141.74C155.043 141.511 155.96 140.593 155.502 139.217ZM124.768 148.391C126.144 145.41 127.062 142.428 128.667 139.447C129.126 138.299 128.438 137.382 127.75 137.153C127.75 136.465 127.291 136.006 126.603 135.777C71.7875 126.603 27.293 89.2183 10.7796 38.5309C21.5592 58.4846 38.0726 75.9154 54.3566 90.594C66.283 101.374 78.8974 111.006 92.6586 119.034C103.438 125.226 116.97 130.96 129.355 127.062C128.667 128.896 131.419 129.814 132.337 128.438C135.318 124.539 138.3 120.869 141.511 117.429C144.721 124.539 148.162 131.648 150.685 138.988C142.199 142.199 133.713 146.327 124.768 148.391Z"
+								fill="#FD5AE8" />
+						</svg>
+						<img src="images/Happy-Man-Transparent-Background.png" alt="placeholder image">
+						<a href="about.html" class="button button--green">More about me.</a>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="footer">
+		<div class="footer__contact">
+			<p class="footer__title">Lets talk.</p>
+			<p class="footer__subtitle">I'm always excited for new things!</p>
+			<a href="mailto:contact@patrickroelofs.com" class="button button--black button--large">
+				contact@patrickroelofs.com
+			</a>
+		</div>
+		<div class="footer__social">
+			<ul>
+				<li>
+					<a target="_blank" href="https://twitter.com/downmetpatrick">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24">
+							<path
+								d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+						</svg>
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="https://www.linkedin.com/in/patrick-roelofs/">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24">
+							<path
+								d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+						</svg>
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="https://www.behance.net/patrickroelofs">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24">
+							<path
+								d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14h-8.027c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-4h4.965c-.105-1.547-1.136-2.219-2.477-2.219-1.466 0-2.277.768-2.488 2.219zm-9.574 6.988h-6.466v-14.967h6.953c5.476.081 5.58 5.444 2.72 6.906 3.461 1.26 3.577 8.061-3.207 8.061zm-3.466-8.988h3.584c2.508 0 2.906-3-.312-3h-3.272v3zm3.391 3h-3.391v3.016h3.341c3.055 0 2.868-3.016.05-3.016z" />
+						</svg>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="footer__copyright">
+			<p>Handcrafted by Patrick Roelofs 2019</p>
+		</div>
+	</footer>
+
+</body>
+
+</html>
