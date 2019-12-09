@@ -4,7 +4,6 @@
     if(!isset($_SESSION['uid'])){
         header("Location: index.php");
     }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,9 +21,9 @@
         <aside>
           <nav>
             <ul>
-              <li><a href="#" class="active">Home</a></li>
-              <li><a href="#">Pages</a></li>
-              <li><a href="#">Setup</a></li>
+              <li><a href="home.php" class="active">Home</a></li>
+              <li><a href="pages.php">Pages</a></li>
+              <li><a href="setup.php">Setup</a></li>
             </ul>
           </nav>
           <a href="#" class="profile--icon">
