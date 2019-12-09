@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -12,20 +16,20 @@
 
     <section class="wrapper wrapper--flex wrapper--full">
         <main>
-          <form id="loginform">
+          <form id="loginform" method="post" action="includes/login.inc.php">
             <fieldset>
               <div>
                 <label>Username</label>
-                <input type="text">
+                <input name="login-uid" type="text">
               </div>
 
               <div>
                 <label>Password</label>
-                <input type="password">
+                <input name="login-pwd" type="password">
               </div>
 
               <div class="center">
-                <button class="button" type="submit">Login</button>
+                <button name="login-submit" class="button" type="submit">Login</button>
               </div>
             </fieldset>
           </form>

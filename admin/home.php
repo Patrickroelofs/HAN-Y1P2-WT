@@ -1,3 +1,11 @@
+<?php
+    session_start();
+
+    if(!isset($_SESSION['uid'])){
+        header("Location: ../index.php");
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -23,7 +31,9 @@
             <span class="icon--circle">P</span>
             <span class="icon--title">Patrick Roelofs</span>
           </a>
+            <form action="includes/logout.inc.php" method="post"><button type="submit" name="logout-submit">Logout</button></form>
         </aside>
+
         <main>
 
           <section id="pages">
@@ -40,7 +50,7 @@
     </section>
 
     <footer>
-      <p>Developed by Patrick Roelofs <?php echo date('Y'); ?></p>
+        <p>Developed by Patrick Roelofs <?php echo date('Y'); ?></p>
     </footer>
   </body>
 </html>
