@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <title>Honigevents | Patrick Roelofs</title>
 	<?php include('imports/head.php'); ?>
 </head>
 
