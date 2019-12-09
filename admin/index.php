@@ -5,19 +5,31 @@
 
     <link rel="stylesheet" href="css/admin-stylesheet.css">
   </head>
-  <body>
-    <header>
-      <h1><a href="#">Login to admin area</a></h1>
+  <body id="index">
+    <header class="center">
+      <h1><a href="#">Login</a></h1>
     </header>
 
     <section class="wrapper wrapper--flex wrapper--full">
         <main>
+          <form id="loginform">
+            <fieldset>
+              <div>
+                <label>Username</label>
+                <input type="text">
+              </div>
 
+              <div>
+                <label>Password</label>
+                <input type="password">
+              </div>
+
+              <div class="center">
+                <button class="button" type="submit">Login</button>
+              </div>
+            </fieldset>
+          </form>
         </main>
     </section>
-
-    <footer>
-      <p>Developed by Patrick Roelofs <?php echo date('Y'); ?></p>
-    </footer>
   </body>
 </html>
