@@ -1,0 +1,153 @@
+/* ==========================================================================
+		FONTS
+	 ========================================================================== */
+
+@font-face {
+  font-family: "Work Sans";
+  src: url('/css/fonts/Work_Sans/WorkSans-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url('/css/fonts/Open_Sans/OpenSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url('/css/fonts/Open_Sans/OpenSans-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Kalam";
+  src: url('/css/fonts/Kalam/Kalam-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+/* ==========================================================================
+		GLOBALS
+   ========================================================================== */
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body, html {
+	font-family: 'Open Sans', sans-serif;
+	background: #fcfcfc;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Work Sans', 'Open Sans', sans-serif;
+}
+
+ul, li {
+	list-style: none;
+}
+
+p {
+	font-size: 1em;
+	line-height: 1.8em;
+}
+
+a {
+	color: inherit;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+
+/* ==========================================================================
+		HEADER
+	 ========================================================================== */
+
+	 header{
+	max-width: 1200px;
+	margin: 32px auto;
+}
+
+/* ==========================================================================
+		ASIDE
+	 ========================================================================== */
+nav a{
+	display: block;
+	padding: 8px 0;
+}
+
+.active{
+	font-weight: bold;
+}
+
+.profile--icon{
+	margin-top: 64px;
+	display: block;
+}
+
+.profile--icon .icon--circle{
+	background: #29fca5;
+	display: inline-block;
+	width: 33px;
+	height: 33px;
+	border-radius: 100%;
+	color: black;
+	font-weight: bold;
+	padding: 6px;
+	text-align: center;
+}
+
+.profile--icon .icon--title{
+	padding-left: 6px;
+}
+
+/* ==========================================================================
+		MAIN
+	 ========================================================================== */
+
+.wrapper--flex{
+	display: flex;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.wrapper--full main{
+	width: 100%;
+}
+
+aside{
+	width: 20%;
+}
+
+main{
+	width: 80%;
+	padding: 16px;
+	background: white;
+	box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+main section{
+	padding-bottom: 64px;
+}
+
+main h2{
+	padding-bottom: 12px;
+}
+
+hr{
+	border: 1px solid black;
+}
+
+/* ==========================================================================
+		FOOTER
+	 ========================================================================== */
+footer p{
+	margin: 0 auto;
+	max-width: 1200px;
+	text-align: right;
+	padding: 16px 0;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Admin | Patrick Roelofs</title>
+
+    <link rel="stylesheet" href="css/admin-stylesheet.css">
+  </head>
+  <body>
+    <header>
+      <h1><a href="#">Admin</a></h1>
+    </header>
+
+    <section class="wrapper wrapper--flex">
+        <aside>
+          <nav>
+            <ul>
+              <li><a href="#" class="active">Home</a></li>
+              <li><a href="#">Pages</a></li>
+              <li><a href="#">Setup</a></li>
+            </ul>
+          </nav>
+          <a href="#" class="profile--icon">
+            <span class="icon--circle">P</span>
+            <span class="icon--title">Patrick Roelofs</span>
+          </a>
+        </aside>
+        <main>
+
+          <section id="pages">
+            <h2>Popular pages</h2>
+            <hr>
+          </section>
+
+          <section id="stats">
+            <h2>Stats</h2>
+            <hr>
+          </section>
+
+        </main>
+    </section>
+
+    <footer>
+      <p>Developed by Patrick Roelofs <?php echo date('Y'); ?></p>
+    </footer>
+  </body>
+</html>
