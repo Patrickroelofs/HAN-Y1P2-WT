@@ -1,5 +1,4 @@
-<?php 
-// TODO: Secure SQL Injection attacks
+<?php
 
 if(isset($_POST['register-submit'])) {
 
