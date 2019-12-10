@@ -2,7 +2,7 @@
 session_start();
 
 if(!isset($_SESSION['uid'])){
-	header('Location: index.php');
+    header('Location: index.php');
 }
 ?>
 
@@ -15,7 +15,7 @@ if(!isset($_SESSION['uid'])){
 </head>
 <body>
 <header>
-    <h1><a href="#">Admin | Setup</a></h1>
+    <h1><a href="#">Admin | Portfolio</a></h1>
 </header>
 
 <section class="wrapper wrapper--flex">
@@ -24,8 +24,8 @@ if(!isset($_SESSION['uid'])){
             <ul>
                 <li><a href="home.php">Home</a></li>
                 <li><a href="pages.php">Pages</a></li>
-                <li><a href="portfolio.php">Portfolio</a></li>
-                <li><a href="setup.php" class="active">Setup</a></li>
+                <li><a href="portfolio.php" class="active">Portfolio</a></li>
+                <li><a href="setup.php">Setup</a></li>
             </ul>
         </nav>
         <a href="userinfo.php" class="profile--icon">
