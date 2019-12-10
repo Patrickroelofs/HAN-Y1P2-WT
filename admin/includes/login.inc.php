@@ -8,6 +8,7 @@ if(isset($_POST['login-submit'])) {
 	$emailuid = $_POST['login-uid'];
 	$password = $_POST['login-pwd'];
 
+	// Grab (hashed)password from user
 	$stmt = $connection->prepare("SELECT pwd FROM adminusers WHERE username ='$emailuid' OR email ='$emailuid'");
 	$stmt->execute();
 	$result = $stmt->fetch(PDO::FETCH_COLUMN);
@@ -26,7 +27,7 @@ if(isset($_POST['login-submit'])) {
 		exit();
 
 	} else {
-		// Error out if a wrong password is given
+		// Error out if a wrong password or username is given
 		header('Location: ../index.php');
 		exit();
 
