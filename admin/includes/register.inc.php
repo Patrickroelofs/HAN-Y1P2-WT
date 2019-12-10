@@ -1,9 +1,9 @@
-<?php
-// TODO: Secure passwords
+<?php 
 // TODO: Secure SQL Injection attacks
 
-require 'databasehandler.inc.php';
 if(isset($_POST['register-submit'])) {
+
+	require 'databasehandler.inc.php';
 
 	$username 		= 	$_POST['uid'];
 	$email 			= 	$_POST['email'];
@@ -11,7 +11,7 @@ if(isset($_POST['register-submit'])) {
 	$passwordRepeat = 	$_POST['pwd-repeat'];
 
 	//No input given
-	if($username == '' || $email == '' || $password == '' || $passwordRepeat == ''){
+	if(empty($username) || empty($email) || empty($password) || empty($passwordRepeat)){
 		header("Location: ../register.php?error=emptyfields&uid=".$username."&email=".$email);
 		exit();
 
@@ -43,11 +43,11 @@ if(isset($_POST['register-submit'])) {
 			$stmt->execute(array(
 				':username' => $username,
 				':email' => $email,
-				':pwd' => $password
+				':pwd' => password_hash($password, PASSWORD_DEFAULT)
 			));
 
 			// Send user to login
-			header("Location: ../login.php?=success");
+			header("Location: ../index.php?=success");
 			exit();
 
 		} catch(PDOException $e){
