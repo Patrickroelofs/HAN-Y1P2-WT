@@ -47,22 +47,22 @@ $row = $stmt->fetch(PDO::FETCH_OBJ);
             <fieldset>
                 <div>
                     <label>Title</label>
-                    <input name="title" type="text" placeholder="<?php echo $row->title; ?>">
+                    <input name="title" type="text" placeholder="<?php echo $row->title; ?>" value="<?php echo $row->title; ?>">
                 </div>
 
                 <div>
                     <label>Author</label>
-                    <input name="author" type="text" placeholder="<?php echo $row->author; ?>">
+                    <input name="author" type="text" placeholder="<?php echo $row->author; ?>" value="<?php echo $row->author; ?>">
                 </div>
 
                 <div>
                     <label>Description</label>
-                    <input name="description" type="text" placeholder="<?php echo $row->description; ?>">
+                    <input name="description" type="text" placeholder="<?php echo $row->description; ?>" value="<?php echo $row->description; ?>">
                 </div>
 
                 <div>
                     <label>Keywords</label>
-                    <input name="keywords" type="text" placeholder="<?php echo $row->keywords; ?>">
+                    <input name="keywords" type="text" placeholder="<?php echo $row->keywords; ?>" value="<?php echo $row->keywords; ?>">
                 </div>
 
                 <div class="center">
