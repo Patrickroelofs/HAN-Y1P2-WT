@@ -2,7 +2,7 @@
 
 if(isset($_POST['register-submit'])) {
 
-	require 'databasehandler.inc.php';
+	require '../../includes/databasehandler.inc.php';
 
 	$username 		= 	$_POST['uid'];
 	$email 			= 	$_POST['email'];

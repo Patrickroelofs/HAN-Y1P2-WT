@@ -225,3 +225,9 @@ button{
 button:hover {
 	box-shadow: 6px 6px 0px 2px black;
 }
+
+#setupform label{
+	margin-top: 16px;
+	display: block;
+	padding: 12px 0;
+}

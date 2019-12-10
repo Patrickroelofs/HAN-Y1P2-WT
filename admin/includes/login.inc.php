@@ -3,7 +3,7 @@
 
 if(isset($_POST['login-submit'])) {
 
-	require 'databasehandler.inc.php';
+	require '../../includes/databasehandler.inc.php';
 
 	$emailuid = $_POST['login-uid'];
 	$password = $_POST['login-pwd'];

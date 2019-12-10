@@ -1,9 +1,16 @@
 <?php
+include '../includes/databasehandler.inc.php';
+
+// Check if user is logged in
 session_start();
 
 if(!isset($_SESSION['uid'])){
 	header('Location: index.php');
 }
+
+// Get filled in data from database
+$stmt = $connection->query('SELECT * FROM setup');
+$row = $stmt->fetch(PDO::FETCH_OBJ);
 ?>
 
 <!DOCTYPE html>
@@ -36,7 +43,33 @@ if(!isset($_SESSION['uid'])){
     </aside>
 
     <main>
+        <form id="setupform" method="post" action="includes/setup.inc.php">
+            <fieldset>
+                <div>
+                    <label>Title</label>
+                    <input name="title" type="text" placeholder="<?php echo $row->title; ?>">
+                </div>
 
+                <div>
+                    <label>Author</label>
+                    <input name="author" type="text" placeholder="<?php echo $row->author; ?>">
+                </div>
+
+                <div>
+                    <label>Description</label>
+                    <input name="description" type="text" placeholder="<?php echo $row->description; ?>">
+                </div>
+
+                <div>
+                    <label>Keywords</label>
+                    <input name="keywords" type="text" placeholder="<?php echo $row->keywords; ?>">
+                </div>
+
+                <div class="center">
+                    <button name="setup-submit" class="button" type="submit">Change</button>
+                </div>
+            </fieldset>
+        </form>
 
     </main>
 </section>
