@@ -1,4 +1,6 @@
 <?php
+// TODO: Secure passwords
+// TODO: Secure SQL Injection attacks
 
 require 'databasehandler.inc.php';
 if(isset($_POST['register-submit'])) {
