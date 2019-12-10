@@ -38,11 +38,11 @@ if(isset($_POST['register-submit'])) {
 		// start insert into database
 
 		try {
-			$stmt = $connection->prepare('INSERT INTO adminusers (username, email, pwd) VALUES (:username, :email, :pwd)');
+			$stmt = $connection->prepare('INSERT INTO admins (username, email, password) VALUES (:username, :email, :password)');
 			$stmt->execute(array(
 				':username' => $username,
 				':email' => $email,
-				':pwd' => password_hash($password, PASSWORD_DEFAULT)
+				':password' => password_hash($password, PASSWORD_DEFAULT)
 			));
 
 			// Send user to login

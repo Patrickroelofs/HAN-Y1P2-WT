@@ -15,7 +15,7 @@ if(!isset($_SESSION['uid'])){
 </head>
 <body>
 <header>
-    <h1><a href="#">Admin | Portfolio</a></h1>
+    <h1><a href="index.php">Admin</a></h1>
 </header>
 
 <section class="wrapper wrapper--flex">
@@ -36,7 +36,6 @@ if(!isset($_SESSION['uid'])){
     </aside>
 
     <main>
-
 
     </main>
 </section>

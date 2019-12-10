@@ -9,7 +9,7 @@ if(isset($_POST['login-submit'])) {
 	$password = $_POST['login-pwd'];
 
 	// Grab (hashed)password from user
-	$stmt = $connection->prepare("SELECT pwd FROM adminusers WHERE username ='$emailuid' OR email ='$emailuid'");
+	$stmt = $connection->prepare("SELECT password FROM admins WHERE username ='$emailuid' OR email ='$emailuid'");
 	$stmt->execute();
 	$result = $stmt->fetch(PDO::FETCH_COLUMN);
 

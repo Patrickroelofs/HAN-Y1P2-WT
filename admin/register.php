@@ -9,13 +9,13 @@ if(isset($_SESSION['uid'])){
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Register | Patrick Roelofs</title>
+    <title>Register</title>
 
     <link rel="stylesheet" href="css/admin-stylesheet.css">
   </head>
   <body id="index">
     <header class="center">
-      <h1><a href="#">Register</a></h1>
+      <h1><a href="index.php">Register</a></h1>
     </header>
 
     <section class="wrapper wrapper--flex wrapper--full">

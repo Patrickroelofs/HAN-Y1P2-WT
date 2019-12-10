@@ -15,7 +15,7 @@
   </head>
   <body>
     <header>
-      <h1><a href="#">Admin</a></h1>
+      <h1><a href="index.php">Admin</a></h1>
     </header>
 
     <section class="wrapper wrapper--flex">
@@ -36,16 +36,6 @@
         </aside>
 
         <main>
-
-          <section id="pages">
-            <h2>Popular pages</h2>
-            <hr>
-          </section>
-
-          <section id="stats">
-            <h2>Stats</h2>
-            <hr>
-          </section>
 
         </main>
     </section>
