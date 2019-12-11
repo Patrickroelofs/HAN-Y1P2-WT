@@ -1,6 +1,7 @@
 <?php
 
 if(isset($_POST['setup-submit'])) {
+
     require '../../includes/databasehandler.inc.php';
 
     $title          = $_POST['title'];
@@ -15,7 +16,7 @@ if(isset($_POST['setup-submit'])) {
     } else {
         // start insert into setup table
         try{
-            $stmt = $connection->prepare('UPDATE setup SET title=:title, author=:author, description=:description, keywords=:keywords');
+            $stmt = $connection->prepare('UPDATE portfolio.setup SET title=:title, author=:author, description=:description, keywords=:keywords');
             $stmt->execute(array(
                 ':title' => $title,
                 ':author' => $author,

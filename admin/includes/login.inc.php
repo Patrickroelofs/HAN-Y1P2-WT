@@ -1,6 +1,5 @@
 <?php
 
-
 if(isset($_POST['login-submit'])) {
 
 	require '../../includes/databasehandler.inc.php';
@@ -9,8 +8,11 @@ if(isset($_POST['login-submit'])) {
 	$password = $_POST['login-pwd'];
 
 	// Grab (hashed)password from user
-	$stmt = $connection->prepare("SELECT password FROM admins WHERE username ='$emailuid' OR email ='$emailuid'");
-	$stmt->execute();
+	$stmt = $connection->prepare("SELECT password FROM admins WHERE username=:username OR email=:email");
+	$stmt->execute(array(
+		':username' => $emailuid,
+		':email' => $emailuid
+	));
 	$result = $stmt->fetch(PDO::FETCH_COLUMN);
 
 	if(empty($emailuid) || empty($password)) {
