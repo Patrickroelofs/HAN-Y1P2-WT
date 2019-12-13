@@ -2,7 +2,7 @@
 
 if(isset($_POST['setup-submit'])) {
 
-    require '../../includes/databasehandler.inc.php';
+    require '../../includes/dbh.inc.php';
 
     $title          = $_POST['title'];
     $author         = $_POST['author'];

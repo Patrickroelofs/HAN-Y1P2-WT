@@ -1,5 +1,5 @@
 <?php
-include '../includes/databasehandler.inc.php';
+include '../includes/dbh.inc.php';
 
 // Check if user is logged in
 session_start();
