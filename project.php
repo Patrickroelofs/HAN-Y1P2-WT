@@ -1,12 +1,11 @@
 <?php
     include 'includes/dbh.inc.php';
-    include 'includes/functions.inc.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>Honigevents | <?php echo getSetup('title'); ?></title>
+    <title>Honigevents | Patrick Roelofs</title>
 	<?php include('imports/head.php'); ?>
 </head>
 

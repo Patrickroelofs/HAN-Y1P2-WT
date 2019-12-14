@@ -1,43 +1,123 @@
-drop database portfolio;
-create database portfolio;
+/* ***************************** */
+/**        START                 */
+/* ***************************** */
+DROP    DATABASE    portfolio;
+CREATE  DATABASE    portfolio;
+USE                 portfolio;
 
-create table admins
+
+/* ***************************** */
+/**        Admins                */
+/* ***************************** */
+CREATE TABLE admins
 (
-    id int(11) unsigned auto_increment,
-    username tinytext not null,
-    email tinytext not null,
-    password longtext not null,
-    constraint admins_pk
-        primary key (id)
+    id              INT             UNSIGNED    AUTO_INCREMENT,
+    username        TINYTEXT        NOT NULL    UNIQUE,
+    email           TINYTEXT        NOT NULL    UNIQUE,
+    password        LONGTEXT        NOT NULL,
+
+    CONSTRAINT admins_pk
+        PRIMARY KEY (id)
 );
 
-insert into admins (id, username, email, password) VALUES (
-    '1',
+INSERT INTO admins (username, email, password) VALUES (
     'stolenbows',
     'stolenbows@gmail.com',
     '$2y$10$sRlr8mgKjYTzOUFoCO21QOeOiUzkQqJ8nmBXQVGcgK82M9KFOMnOS'
 );
 
-create table projects
+
+/* ***************************** */
+/**        Projects              */
+/* ***************************** */
+CREATE TABLE projects
 (
-    id int not null,
-    title tinytext not null,
-    tags tinytext not null,
-    description mediumtext not null,
-    content longtext not null
+    id              INT				UNSIGNED	AUTO_INCREMENT,
+    thumbnail		TINYTEXT		NOT NULL,
+    date            DATE            NULL,
+    title           TINYTEXT        NULL,
+    tags            TINYTEXT        NULL,
+    description     MEDIUMTEXT      NULL,
+    content         LONGTEXT        NULL,
+
+    CONSTRAINT projects_pk
+		PRIMARY KEY (id)
 );
 
-create table setup
-(
-    title tinytext not null,
-    author tinytext not null,
-    description mediumtext not null,
-    keywords mediumtext not null
+INSERT INTO projects VALUES (
+                             '1',
+                             'images/thumbnails/thumbnail_energy.jpg',
+                             '2019-12-14',
+                             'Energy Challenge',
+                             'UX Prototype',
+                             'This project is about the course ''Interaction 4 Mobile''. Our task: Work on a major consumer mobile platform for an energy company.',
+                             ''
 );
 
-insert into setup (title, author, description, keywords) VALUES (
+
+/* ***************************** */
+/**        Setup                 */
+/* ***************************** */
+CREATE TABLE setup
+(
+    title           TINYTEXT        NOT NULL,
+    author          TINYTEXT        NOT NULL,
+    description     MEDIUMTEXT      NOT NULL,
+    keywords        MEDIUMTEXT      NOT NULL
+);
+
+INSERT INTO setup (title, author, description, keywords) VALUES (
     'Patrick Roelofs',
-    '',
-    '',
-    ''
+    'Patrick Roelofs',
+    'Patrick Roelofs is student, designer and developer in the Netherlands.',
+    'Developer, Designer, Interaction, UX, Webdeveloper, HTML, CSS, PHP, JS'
 );
+
+/* ***************************** */
+/**        Blog                  */
+/* ***************************** */
+CREATE TABLE blog
+(
+    id              INT				UNSIGNED	AUTO_INCREMENT,
+    date            DATE            NOT NULL,
+    title           TINYTEXT        NOT NULL,
+    tags            TINYTEXT        NOT NULL,
+    description     MEDIUMTEXT      NOT NULL,
+    content         LONGTEXT        NOT NULL,
+
+    CONSTRAINT blog_pk
+		PRIMARY KEY (id)
+);
+
+/* ***************************** */
+/**        Messages              */
+/* ***************************** */
+CREATE TABLE messages
+(
+	id				INT				UNSIGNED	AUTO_INCREMENT,
+	date			DATE			NOT NULL,
+	name			TINYTEXT		NOT NULL,
+	email			TINYTEXT		NOT NULL,
+	subject			MEDIUMTEXT		NOT NULL,
+	project			INT				NOT NULL,
+	content			LONGTEXT		NOT NULL,
+
+	CONSTRAINT messages_pk
+		PRIMARY KEY (id),
+
+	CONSTRAINT project_fk
+		FOREIGN KEY (id) REFERENCES projects (id)
+);
+
+/* ***************************** */
+/**        Experiences           */
+/* ***************************** */
+CREATE TABLE experiences
+(
+    id				INT				NOT NULL,
+    location		TINYTEXT		NOT NULL,
+    title			TINYTEXT		NOT NULL,
+    url				TINYTEXT		NOT NULL,
+    date			TINYTEXT		NOT NULL,
+    description		MEDIUMTEXT		NOT NULL
+)

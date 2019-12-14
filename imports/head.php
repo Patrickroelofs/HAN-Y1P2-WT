@@ -3,9 +3,9 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 
-<meta name="author" content="<?php echo getSetup('author'); ?>">
-<meta name="description" content="<?php echo getSetup('description'); ?>">
-<meta name="keywords" content="<?php echo getSetup('keywords'); ?>">
+<meta name="author" content="">
+<meta name="description" content="">
+<meta name="keywords" content="">
 
 <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
