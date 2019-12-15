@@ -196,6 +196,7 @@ textarea {
 	font-size: 1em;
 	font-family: 'Work Sans', sans-serif;
 	color: black;
+	width: 100%;
 }
 
 select {

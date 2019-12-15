@@ -1,16 +1,9 @@
 <?php
-include '../includes/dbh.inc.php';
-
-// Check if user is logged in
 session_start();
 
 if(!isset($_SESSION['uid'])){
-	header('Location: index.php');
+    header('Location: index.php');
 }
-
-// Get filled in data from database
-$stmt = $connection->query('SELECT * FROM setup');
-$row = $stmt->fetch(PDO::FETCH_OBJ);
 ?>
 
 <!DOCTYPE html>
@@ -31,8 +24,8 @@ $row = $stmt->fetch(PDO::FETCH_OBJ);
             <ul>
                 <li><a href="home.php">Home</a></li>
                 <li><a href="pages.php">Pages</a></li>
-                <li><a href="projects.php">Projects</a></li>
-                <li><a href="setup.php" class="active">Setup</a></li>
+                <li><a href="projects.php" class="active">Projects</a></li>
+                <li><a href="setup.php">Setup</a></li>
             </ul>
         </nav>
         <a href="userinfo.php" class="profile--icon">
@@ -43,34 +36,43 @@ $row = $stmt->fetch(PDO::FETCH_OBJ);
     </aside>
 
     <main>
-        <form id="setupform" method="post" action="includes/setup.inc.php">
+        <form id="loginform" action="includes/addproject.inc.php" method="POST" enctype="multipart/form-data">
             <fieldset>
                 <div>
                     <label>Title</label>
-                    <input name="title" type="text" placeholder="<?php echo $row->title; ?>" value="<?php echo $row->title; ?>">
+                    <input name="title" type="text">
                 </div>
 
                 <div>
-                    <label>Author</label>
-                    <input name="author" type="text" placeholder="<?php echo $row->author; ?>" value="<?php echo $row->author; ?>">
+                    <label>Tags</label>
+                    <input name="tags" type="text">
+                </div>
+
+                <div>
+                    <label>Date</label>
+                    <input name="date" type="date">
                 </div>
 
                 <div>
                     <label>Description</label>
-                    <input name="description" type="text" placeholder="<?php echo $row->description; ?>" value="<?php echo $row->description; ?>">
+                    <input name="description" type="text">
                 </div>
 
                 <div>
-                    <label>Keywords</label>
-                    <input name="keywords" type="text" placeholder="<?php echo $row->keywords; ?>" value="<?php echo $row->keywords; ?>">
+                    <label>Thumbnail</label>
+                    <input name="thumbnail[]" type="file">
+                </div>
+
+                <div>
+                    <label>Content</label>
+                    <textarea name="content"></textarea>
                 </div>
 
                 <div class="center">
-                    <button name="setup-submit" class="button" type="submit">Change</button>
+                    <button name="addproject-submit" class="button" type="submit">Add Project</button>
                 </div>
             </fieldset>
         </form>
-
     </main>
 </section>
 

@@ -24,7 +24,7 @@ if(!isset($_SESSION['uid'])){
             <ul>
                 <li><a href="home.php">Home</a></li>
                 <li><a href="pages.php">Pages</a></li>
-                <li><a href="portfolio.php" class="active">Portfolio</a></li>
+                <li><a href="projects.php" class="active">Projects</a></li>
                 <li><a href="setup.php">Setup</a></li>
             </ul>
         </nav>
@@ -36,7 +36,8 @@ if(!isset($_SESSION['uid'])){
     </aside>
 
     <main>
-
+        <a href="addproject.php">+ Add a Project</a>
+        <!-- //todo: Display projects -->
     </main>
 </section>
 

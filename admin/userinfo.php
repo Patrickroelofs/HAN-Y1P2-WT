@@ -24,7 +24,7 @@ if(!isset($_SESSION['uid'])){
             <ul>
                 <li><a href="home.php">Home</a></li>
                 <li><a href="pages.php">Pages</a></li>
-                <li><a href="portfolio.php">Portfolio</a></li>
+                <li><a href="projects.php">Projects</a></li>
                 <li><a href="setup.php">Setup</a></li>
             </ul>
         </nav>

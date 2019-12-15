@@ -45,13 +45,13 @@ CREATE TABLE projects
 );
 
 INSERT INTO projects VALUES (
-                             '1',
-                             'images/thumbnails/thumbnail_energy.jpg',
-                             '2019-12-14',
-                             'Energy Challenge',
-                             'UX Prototype',
-                             'This project is about the course ''Interaction 4 Mobile''. Our task: Work on a major consumer mobile platform for an energy company.',
-                             ''
+	'1',
+	'images/thumbnails/thumbnail_energy.jpg',
+	'2019-12-14',
+	'Energy Challenge',
+	'UX Prototype',
+	'This project is about the course ''Interaction 4 Mobile''. Our task: Work on a major consumer mobile platform for an energy company.',
+	''
 );
 
 
