@@ -1,9 +1,16 @@
 /* ***************************** */
 /**        START                 */
 /* ***************************** */
-DROP    DATABASE    portfolio;
-CREATE  DATABASE    portfolio;
-USE                 portfolio;
+DROP    DATABASE IF EXISTS      portfolio;
+CREATE  DATABASE                portfolio;
+USE                             portfolio;
+
+DROP TABLE IF EXISTS admins;
+DROP TABLE IF EXISTS projects;
+DROP TABLE IF EXISTS setup;
+DROP TABLE IF EXISTS blog;
+DROP TABLE IF EXISTS messages;
+DROP TABLE IF EXISTS experiences;
 
 
 /* ***************************** */
@@ -12,8 +19,8 @@ USE                 portfolio;
 CREATE TABLE admins
 (
     id              INT             UNSIGNED    AUTO_INCREMENT,
-    username        TINYTEXT        NOT NULL    UNIQUE,
-    email           TINYTEXT        NOT NULL    UNIQUE,
+    username        VARCHAR(255)    NOT NULL    UNIQUE,
+    email           VARCHAR(255)    NOT NULL    UNIQUE,
     password        LONGTEXT        NOT NULL,
 
     CONSTRAINT admins_pk
