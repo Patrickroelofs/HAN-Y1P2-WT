@@ -1,9 +1,16 @@
 <?php
 session_start();
+$accountExists = true;
 
 if(isset($_SESSION['uid'])){
 	header('Location: home.php');
 }
+
+if($accountExists == true){
+    header("Location: home.php");
+    exit();
+}
+
 ?>
 
 <!DOCTYPE html>
