@@ -10,9 +10,9 @@ if(isset($_POST['send-message'])) {
     $subject 	= 	$_POST['subject'];
     $content 	= 	$_POST['textarea'];
 
-    if(empty($name)){
+    if(empty($name) || empty($mail) || empty($subject) || empty($content)){
 
-        header("Location: ../index.php?=fail");
+        header("Location: ../index.php?=EmptyFields");
         exit();
 
     } else {

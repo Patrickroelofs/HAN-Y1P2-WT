@@ -4,6 +4,7 @@ $accountExists = true;
 
 if(isset($_SESSION['uid'])){
 	header('Location: home.php');
+	exit();
 }
 
 if($accountExists == true){
