@@ -19,10 +19,10 @@
     </div>
     <div class="nav__navigation">
       <ul>
-        <li><a href="index.php" class="nav__link nav--active">Home</a></li>
-        <li><a href="about.php" class="nav__link">About</a></li>
-        <li><a href="projects.php" class="nav__link">Projects</a></li>
-        <li><a href="contact.php" class="nav__link">Contact</a></li>
+        <li><a href="index.php" class="nav__link <?php if ($thisPage == 'Home') echo 'nav--active' ?>">Home</a></li>
+        <li><a href="about.php" class="nav__link <?php if ($thisPage == "About") echo "nav--active"; ?>">About</a></li>
+        <li><a href="projects.php" class="nav__link <?php if ($thisPage == 'Projects' || $thisPage == 'Project') echo 'nav--active' ?>">Projects</a></li>
+        <li><a href="contact.php" class="nav__link <?php if ($thisPage == 'Contact') echo 'nav--active' ?>">Contact</a></li>
       </ul>
     </div>
   </div>

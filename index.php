@@ -1,5 +1,6 @@
 <?php
     include 'includes/dbh.inc.php';
+    $thisPage = 'Home';
 ?>
 <!DOCTYPE html>
 <html lang="en">

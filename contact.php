@@ -1,5 +1,6 @@
 <?php
     include 'includes/dbh.inc.php';
+    $thisPage = 'Contact';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,40 +24,28 @@
 	<main class="main--small">
 		<div class="container">
 			<div class="contactform">
-				<form class="contactform__form">
+				<form class="contactform__form" action="includes/sendMessage.inc.php" method="post" enctype="multipart/form-data" >
 					<fieldset>
 						<div>
 							<div>
 								<div>
 									<label for="name">Name</label>
-									<input id="name" type="text" placeholder="A funny name">
+									<input name="name" id="name" type="text" placeholder="A funny name">
 								</div>
 								<div>
 									<label for="email">Email Address</label>
-									<input id="email" type="email" placeholder="Your awkward email address">
+									<input name="email" id="email" type="email" placeholder="Your awkward email address">
 								</div>
 								<div>
 									<label for="subject">Subject</label>
-									<input id="subject" type="text" placeholder="A catchy title">
-								</div>
-								<div>
-									<label for="projectSelect">Project specific information?</label>
-									<select id="projectSelect">
-										<option>Select a cool project</option>
-										<option value="Nzayi">Nzayi</option>
-										<option value="EnergyChallenge">Energy Challenge</option>
-										<option value="TheFutureOfRetail">The Future Of Retail</option>
-										<option value="Honigevents">Honigevents</option>
-										<option value="DivingForTreasure">Diving For Treasure</option>
-										<option value="Kaluandafest2019">Kaluandafest 2019</option>
-									</select>
+									<input name="subject" id="subject" type="text" placeholder="A catchy title">
 								</div>
 							</div>
 							<div>
 								<label for="textarea">Text</label>
-								<textarea id="textarea" rows="19"
+								<textarea name="textarea" id="textarea" rows="19"
 									placeholder="An entire research paper worth of text."></textarea>
-								<button class="button button--green">Submit</button>
+								<button name="send-message" class="button button--green">Submit</button>
 							</div>
 						</div>
 					</fieldset>

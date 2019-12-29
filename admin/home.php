@@ -25,6 +25,7 @@
                 <li><a href="home.php" class="active">Home</a></li>
                 <li><a href="pages.php">Pages</a></li>
                 <li><a href="projects.php">Projects</a></li>
+                <li><a href="messages.php">Messages</a></li>
                 <li><a href="setup.php">Setup</a></li>
             </ul>
           </nav>

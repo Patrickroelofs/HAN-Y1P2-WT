@@ -6,10 +6,10 @@ CREATE  DATABASE                portfolio;
 USE                             portfolio;
 
 DROP TABLE IF EXISTS admins;
+DROP TABLE IF EXISTS messages;
 DROP TABLE IF EXISTS projects;
 DROP TABLE IF EXISTS setup;
 DROP TABLE IF EXISTS blog;
-DROP TABLE IF EXISTS messages;
 DROP TABLE IF EXISTS experiences;
 
 
@@ -106,14 +106,10 @@ CREATE TABLE messages
 	name			TINYTEXT		NOT NULL,
 	email			TINYTEXT		NOT NULL,
 	subject			MEDIUMTEXT		NOT NULL,
-	project			INT				NOT NULL,
 	content			LONGTEXT		NOT NULL,
 
 	CONSTRAINT messages_pk
-		PRIMARY KEY (id),
-
-	CONSTRAINT project_fk
-		FOREIGN KEY (id) REFERENCES projects (id)
+		PRIMARY KEY (id)
 );
 
 /* ***************************** */

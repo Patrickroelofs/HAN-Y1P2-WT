@@ -1,9 +1,13 @@
 <?php
+include '../includes/dbh.inc.php';
+
 session_start();
 
 if(!isset($_SESSION['uid'])){
-	header('Location: index.php');
+    header('Location: index.php');
 }
+
+    $stmt = $connection->query('SELECT * FROM messages');
 ?>
 
 <!DOCTYPE html>
@@ -23,9 +27,9 @@ if(!isset($_SESSION['uid'])){
         <nav>
             <ul>
                 <li><a href="home.php">Home</a></li>
-                <li><a href="pages.php" class="active">Pages</a></li>
+                <li><a href="pages.php">Pages</a></li>
                 <li><a href="projects.php">Projects</a></li>
-                <li><a href="messages.php">Messages</a></li>
+                <li><a href="messages.php" class="active">Messages</a></li>
                 <li><a href="setup.php">Setup</a></li>
             </ul>
         </nav>
@@ -37,8 +41,16 @@ if(!isset($_SESSION['uid'])){
     </aside>
 
     <main>
-
-
+    <?php foreach($stmt as $message) { ?>
+        <div>
+            <div>
+                <strong><?php echo $message['date']; ?> | <?php echo $message['name']; ?></strong>
+                <h3><?php echo $message['subject']; ?></h3>
+                <p><?php echo $message['content']; ?></p>
+                <a href="mailto: <?php echo $message['email']; ?>"><?php echo $message['email']; ?></a>
+            </div>
+        </div>
+    <?php } ?>
     </main>
 </section>
 
