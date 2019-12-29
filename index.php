@@ -1,4 +1,7 @@
 <?php
+    //TODO: Display (limited) projects
+?>
+<?php
     include 'includes/dbh.inc.php';
     $thisPage = 'Home';
 ?>
@@ -6,7 +9,7 @@
 <html lang="en">
 
 <head>
-    <title>Home | Patrick Roelofs</title>
+    <title><?= $thisPage ?> | Patrick Roelofs</title>
 	<?php include('imports/head.php'); ?>
 </head>
 

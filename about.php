@@ -6,7 +6,7 @@
 <html lang="en">
 
 <head>
-    <title>About | Patrick Roelofs</title>
+    <title><?= $thisPage ?> | Patrick Roelofs</title>
 	<?php include('imports/head.php'); ?>
 </head>
 

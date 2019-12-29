@@ -1,4 +1,10 @@
 <?php
+    //TODO: Add project title to HTML title
+    //TODO: Display Project content
+
+?>
+
+<?php
     include 'includes/dbh.inc.php';
     $thisPage = 'Project';
 ?>

@@ -22,6 +22,7 @@
         <li><a href="index.php" class="nav__link <?php if ($thisPage == 'Home') echo 'nav--active' ?>">Home</a></li>
         <li><a href="about.php" class="nav__link <?php if ($thisPage == "About") echo "nav--active"; ?>">About</a></li>
         <li><a href="projects.php" class="nav__link <?php if ($thisPage == 'Projects' || $thisPage == 'Project') echo 'nav--active' ?>">Projects</a></li>
+          <li><a href="blog.php" class="nav__link <?php if ($thisPage == 'Blog') echo 'nav--active' ?>">Blog</a></li>
         <li><a href="contact.php" class="nav__link <?php if ($thisPage == 'Contact') echo 'nav--active' ?>">Contact</a></li>
       </ul>
     </div>
