@@ -27,25 +27,9 @@
                 <div class="projects">
                     <div class="projects__column">
                         <?php
-
-                        $stmt = $connection->prepare('SELECT * FROM projects');
-                        $stmt->execute();
-
-                        foreach ($stmt as $project) { ?>
-
-                            <a href="project.php" class="projectthumb">
-                                <figure>
-                                    <img src="<?= $project['thumbnail'] ?>" alt="placeholder">
-                                    <figcaption>
-                                        <span class="projectthumb__category"><?= $project['tags'] ?></span>
-                                        <span class="projectthumb__title"><?= $project['title'] ?></span>
-                                        <p class="projectthumb__description"><?= $project['description'] ?></p>
-                                        <span class="projectthumb__button">View Project</span>
-                                    </figcaption>
-                                </figure>
-                            </a>
-
-                        <?php } ?>
+                            $limitProjects = 999;
+                            include('imports/projects.php');
+                        ?>
                     </div>
                 </div>
 			</div>

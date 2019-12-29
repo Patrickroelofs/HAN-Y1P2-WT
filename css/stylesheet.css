@@ -381,16 +381,16 @@ hr {
 
 .projects__column {
 	position: relative;
-	width: calc(50% - 50px);
-}
-
-.column--left {
-	top: 175px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
 
 .projectthumb {
-	display: block;
+	display: inline-block;
 	margin: 48px 0;
+	width: calc(50% - 50px);
+
 }
 
 .projectthumb img {
@@ -894,6 +894,7 @@ select {
 	margin: 12px 0;
 }
 
+
 /* ==========================================================================
 		TABLET
 	 ========================================================================== */
@@ -931,8 +932,8 @@ select {
 	.projects {
 		padding: 0 12px;
 	}
-	.projects__column {
-		width: calc(50% - 25px);
+	.projectthumb{
+		width: calc(50% - 15px);
 	}
 	.experiences__double {
 		display: block;
@@ -1050,8 +1051,8 @@ select {
 		margin: 0 auto;
 		width: 90%;
 	}
-	.column--left {
-		top: 0;
+	.projectthumb{
+		width: 100%;
 	}
 	.projects h3 {
 		font-size: 1.8em;
