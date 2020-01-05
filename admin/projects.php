@@ -1,9 +1,12 @@
 <?php
+//TODO: Edit and Delete projects
+//TODO: Display projects
 session_start();
 
 if(!isset($_SESSION['uid'])){
     header('Location: index.php');
 }
+    $thisPage = 'Projects';
 ?>
 
 <!DOCTYPE html>
@@ -19,26 +22,10 @@ if(!isset($_SESSION['uid'])){
 </header>
 
 <section class="wrapper wrapper--flex">
-    <aside>
-        <nav>
-            <ul>
-                <li><a href="home.php">Home</a></li>
-                <li><a href="pages.php">Pages</a></li>
-                <li><a href="projects.php" class="active">Projects</a></li>
-                <li><a href="messages.php">Messages</a></li>
-                <li><a href="setup.php">Setup</a></li>
-            </ul>
-        </nav>
-        <a href="userinfo.php" class="profile--icon">
-            <span class="icon--circle">P</span>
-            <span class="icon--title">Patrick Roelofs</span>
-        </a>
-        <form action="includes/logout.inc.php" method="post"><button type="submit" name="logout-submit">Logout</button></form>
-    </aside>
+    <?php include('imports/navigation.php'); ?>
 
     <main>
         <a href="addproject.php">+ Add a Project</a>
-        <!-- //todo: Display projects -->
     </main>
 </section>
 

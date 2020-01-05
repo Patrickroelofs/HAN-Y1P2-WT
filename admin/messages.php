@@ -1,4 +1,7 @@
 <?php
+//TODO: Display message in admin
+//TODO: Click on message title do display in single message view
+
 include '../includes/dbh.inc.php';
 
 session_start();
@@ -6,6 +9,7 @@ session_start();
 if(!isset($_SESSION['uid'])){
     header('Location: index.php');
 }
+    $thisPage = 'Messages';
 
     $stmt = $connection->query('SELECT * FROM messages');
 ?>
@@ -23,22 +27,7 @@ if(!isset($_SESSION['uid'])){
 </header>
 
 <section class="wrapper wrapper--flex">
-    <aside>
-        <nav>
-            <ul>
-                <li><a href="home.php">Home</a></li>
-                <li><a href="pages.php">Pages</a></li>
-                <li><a href="projects.php">Projects</a></li>
-                <li><a href="messages.php" class="active">Messages</a></li>
-                <li><a href="setup.php">Setup</a></li>
-            </ul>
-        </nav>
-        <a href="userinfo.php" class="profile--icon">
-            <span class="icon--circle">P</span>
-            <span class="icon--title">Patrick Roelofs</span>
-        </a>
-        <form action="includes/logout.inc.php" method="post"><button type="submit" name="logout-submit">Logout</button></form>
-    </aside>
+    <?php include('imports/navigation.php'); ?>
 
     <main>
     <?php foreach($stmt as $message) { ?>
