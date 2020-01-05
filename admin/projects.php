@@ -1,12 +1,14 @@
 <?php
 //TODO: Edit and Delete projects
 //TODO: Display projects
+
+require '../includes/dbh.inc.php';
 session_start();
 
 if(!isset($_SESSION['uid'])){
     header('Location: index.php');
 }
-    $thisPage = 'AdminProjects';
+$thisPage = 'AdminProjects';
 ?>
 
 <!DOCTYPE html>
@@ -18,20 +20,35 @@ if(!isset($_SESSION['uid'])){
 </head>
 <body>
 <?php include('../includes/adminBar.inc.php'); ?>
-<header>
-    <h1><a href="index.php">Admin</a></h1>
-</header>
+<?php include('imports/navigation.php'); ?>
 
 <section class="wrapper wrapper--flex">
-    <?php include('imports/navigation.php'); ?>
 
-    <main>
+    <main class="container container--large">
         <a href="addproject.php">+ Add a Project</a>
+
+        <div class="projects__column">
+        <?php
+            $stmt = $connection->prepare('SELECT * FROM projects');
+            $stmt->execute();
+
+            foreach ($stmt as $project) {
+        ?>
+        <a href="editproject.php?project=<?= $project['id']; ?>" class="projectthumb">
+            <figure>
+                <img src="../<?= $project['thumbnail'] ?>" alt="placeholder">
+                <figcaption>
+                    <span class="projectthumb__category"><?= $project['tags'] ?></span>
+                    <span class="projectthumb__title"><?= $project['title'] ?></span>
+                    <p class="projectthumb__description"><?= $project['description'] ?></p>
+                </figcaption>
+            </figure>
+        </a>
+        <?php } ?>
+        </div>
     </main>
 </section>
 
-<footer>
-    <p>Developed by Patrick Roelofs <?php echo date('Y'); ?></p>
-</footer>
+<?php include('imports/footer.php'); ?>
 </body>
 </html>

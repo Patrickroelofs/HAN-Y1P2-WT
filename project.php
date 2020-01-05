@@ -38,7 +38,7 @@ $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 	<main class="project">
 		<div class="container container--large">
-
+            <?= $result['content']; ?>
 		</div>
 	</main>
 

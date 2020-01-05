@@ -16,21 +16,12 @@
   </head>
   <body>
     <?php include('../includes/adminBar.inc.php'); ?>
+    <?php include('imports/navigation.php'); ?>
 
-    <header>
-      <h1><a href="index.php">Admin</a></h1>
-    </header>
+    <main class="container container--large">
 
-    <section class="wrapper wrapper--flex">
-        <?php include('imports/navigation.php'); ?>
+    </main>
 
-        <main>
-
-        </main>
-    </section>
-
-    <footer>
-        <p>Developed by Patrick Roelofs <?php echo date('Y'); ?></p>
-    </footer>
+    <?php include('imports/footer.php'); ?>
   </body>
 </html>

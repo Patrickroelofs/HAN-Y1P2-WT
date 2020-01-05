@@ -23,47 +23,42 @@ $row = $stmt->fetch(PDO::FETCH_OBJ);
 </head>
 <body>
 <?php include('../includes/adminBar.inc.php'); ?>
-<header>
-    <h1><a href="index.php">Admin</a></h1>
-</header>
+<?php include('imports/navigation.php'); ?>
 
-<section class="wrapper wrapper--flex">
-    <?php include('imports/navigation.php'); ?>
 
-    <main>
-        <form id="setupform" method="post" action="includes/setup.inc.php">
-            <fieldset>
-                <div>
-                    <label>Title</label>
-                    <input name="title" type="text" placeholder="<?php echo $row->title; ?>" value="<?php echo $row->title; ?>">
-                </div>
 
-                <div>
-                    <label>Author</label>
-                    <input name="author" type="text" placeholder="<?php echo $row->author; ?>" value="<?php echo $row->author; ?>">
-                </div>
+<main class="container container--large">
+    <form id="setupform" method="post" action="includes/setup.inc.php">
+        <fieldset>
+            <div>
+                <label>Title</label>
+                <input name="title" type="text" placeholder="<?php echo $row->title; ?>" value="<?php echo $row->title; ?>">
+            </div>
 
-                <div>
-                    <label>Description</label>
-                    <input name="description" type="text" placeholder="<?php echo $row->description; ?>" value="<?php echo $row->description; ?>">
-                </div>
+            <div>
+                <label>Author</label>
+                <input name="author" type="text" placeholder="<?php echo $row->author; ?>" value="<?php echo $row->author; ?>">
+            </div>
 
-                <div>
-                    <label>Keywords</label>
-                    <input name="keywords" type="text" placeholder="<?php echo $row->keywords; ?>" value="<?php echo $row->keywords; ?>">
-                </div>
+            <div>
+                <label>Description</label>
+                <input name="description" type="text" placeholder="<?php echo $row->description; ?>" value="<?php echo $row->description; ?>">
+            </div>
 
-                <div class="center">
-                    <button name="setup-submit" class="button" type="submit">Change</button>
-                </div>
-            </fieldset>
-        </form>
+            <div>
+                <label>Keywords</label>
+                <input name="keywords" type="text" placeholder="<?php echo $row->keywords; ?>" value="<?php echo $row->keywords; ?>">
+            </div>
 
-    </main>
-</section>
+            <div class="center">
+                <button name="setup-submit" class="button" type="submit">Change</button>
+            </div>
+        </fieldset>
+    </form>
 
-<footer>
-    <p>Developed by Patrick Roelofs <?php echo date('Y'); ?></p>
-</footer>
+</main>
+
+
+<?php include('imports/footer.php'); ?>
 </body>
 </html>

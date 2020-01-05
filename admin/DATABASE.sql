@@ -157,6 +157,9 @@ CREATE TABLE messages
 		PRIMARY KEY (id)
 );
 
+INSERT INTO messages (date, name, email, subject, content)
+VALUES ('2020-1-1', 'Patrick Roelofs', 'Stolenbows@gmail.com', 'My message', 'My Message Text');
+
 /* ***************************** */
 /**        Experiences           */
 /* ***************************** */

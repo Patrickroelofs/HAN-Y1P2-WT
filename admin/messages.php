@@ -23,29 +23,21 @@ if(!isset($_SESSION['uid'])){
 </head>
 <body>
 <?php include('../includes/adminBar.inc.php'); ?>
-<header>
-    <h1><a href="index.php">Admin</a></h1>
-</header>
+<?php include('imports/navigation.php'); ?>
 
-<section class="wrapper wrapper--flex">
-    <?php include('imports/navigation.php'); ?>
-
-    <main>
-    <?php foreach($stmt as $message) { ?>
+<main class="container container--large">
+<?php foreach($stmt as $message) { ?>
+    <div>
         <div>
-            <div>
-                <strong><?php echo $message['date']; ?> | <?php echo $message['name']; ?></strong>
-                <h3><?php echo $message['subject']; ?></h3>
-                <p><?php echo $message['content']; ?></p>
-                <a href="mailto: <?php echo $message['email']; ?>"><?php echo $message['email']; ?></a>
-            </div>
+            <strong><?php echo $message['date']; ?> | <?php echo $message['name']; ?></strong>
+            <h3><?php echo $message['subject']; ?></h3>
+            <p><?php echo $message['content']; ?></p>
+            <a href="mailto: <?php echo $message['email']; ?>"><?php echo $message['email']; ?></a>
         </div>
-    <?php } ?>
-    </main>
-</section>
+    </div>
+<?php } ?>
+</main>
 
-<footer>
-    <p>Developed by Patrick Roelofs <?php echo date('Y'); ?></p>
-</footer>
+<?php include('imports/footer.php'); ?>
 </body>
 </html>

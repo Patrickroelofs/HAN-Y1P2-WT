@@ -251,3 +251,68 @@ button:hover {
 	color: white;
 	font-weight: bold;
 }
+
+.projects__column {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.projectthumb {
+	display: inline-block;
+	margin: 12px 0;
+	width: calc(50% - 12px);
+}
+
+.projectthumb figure{
+	background: black;
+	min-height: 500px;
+}
+
+.projectthumb img {
+	width: 100%;
+	display: block;
+	object-fit: cover;
+	height: 250px;
+}
+
+.projectthumb figcaption {
+	color: white;
+	background: black;
+	padding: 16px 32px;
+}
+
+.projectthumb__category {
+	display: block;
+	font-style: italic;
+	opacity: 0.5;
+	font-size: 1em;
+}
+
+.projectthumb__title {
+	font-family: 'Work Sans', 'Open Sans', sans-serif;
+	font-weight: bold;
+	display: block;
+	font-size: 1.5em;
+}
+
+.projectthumb__description {
+	display: block;
+	font-size: 1em;
+	padding: 16px 0;
+}
+
+.projectthumb__button {
+	display: block;
+	color: var(--theme-color);
+	font-weight: bold;
+	padding: 12px 0;
+}
+
+.projectthumb__textblock {
+	display: inline-block;
+	padding-top: 20%;
+	margin: 16px 0;
+	color: white;
+}
