@@ -28,23 +28,10 @@ $thisPage = 'AdminProjects';
         <a href="addproject.php">+ Add a Project</a>
 
         <div class="projects__column">
-        <?php
-            $stmt = $connection->prepare('SELECT * FROM projects');
-            $stmt->execute();
-
-            foreach ($stmt as $project) {
-        ?>
-        <a href="editproject.php?project=<?= $project['id']; ?>" class="projectthumb">
-            <figure>
-                <img src="../<?= $project['thumbnail'] ?>" alt="placeholder">
-                <figcaption>
-                    <span class="projectthumb__category"><?= $project['tags'] ?></span>
-                    <span class="projectthumb__title"><?= $project['title'] ?></span>
-                    <p class="projectthumb__description"><?= $project['description'] ?></p>
-                </figcaption>
-            </figure>
-        </a>
-        <?php } ?>
+            <?php
+                $limitProjects = 999;
+                include ('imports/projects.php');
+            ?>
         </div>
     </main>
 </section>
