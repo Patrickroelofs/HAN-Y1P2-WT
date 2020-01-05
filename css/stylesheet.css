@@ -894,6 +894,15 @@ select {
 	margin: 12px 0;
 }
 
+.admin-panel{
+	background: #333333;
+	padding: 16px;
+	color: white;
+}
+.admin-panel a{
+	color: white;
+	font-weight: bold;
+}
 
 /* ==========================================================================
 		TABLET
