@@ -1,12 +1,12 @@
 <aside>
     <nav>
         <ul>
-            <li><a href="home.php" class="<?php if($thisPage == 'Home'){ echo 'active'; } ?>">Home</a></li>
-            <li><a href="pages.php" class="<?php if($thisPage == 'Pages'){ echo 'active'; } ?>">Pages</a></li>
-            <li><a href="projects.php" class="<?php if($thisPage == 'Projects' || $thisPage == 'AddProject'){ echo 'active'; } ?>">Projects</a></li>
-            <li><a href="blog.php" class="<?php if($thisPage == 'Blog' || $thisPage == 'AddBlog'){ echo 'active'; } ?>">Blog</a></li>
-            <li><a href="messages.php" class="<?php if($thisPage == 'Messages'){ echo 'active'; } ?>">Messages</a></li>
-            <li><a href="setup.php" class="<?php if($thisPage == 'Setup'){ echo 'active'; } ?>">Setup</a></li>
+            <li><a href="home.php" class="<?php if($thisPage == 'AdminHome'){ echo 'active'; } ?>">Home</a></li>
+            <li><a href="pages.php" class="<?php if($thisPage == 'AdminPages'){ echo 'active'; } ?>">Pages</a></li>
+            <li><a href="projects.php" class="<?php if($thisPage == 'AdminProjects' || $thisPage == 'AdminAddProject'){ echo 'active'; } ?>">Projects</a></li>
+            <li><a href="blog.php" class="<?php if($thisPage == 'AdminBlog' || $thisPage == 'AdminAddBlog'){ echo 'active'; } ?>">Blog</a></li>
+            <li><a href="messages.php" class="<?php if($thisPage == 'AdminMessages'){ echo 'active'; } ?>">Messages</a></li>
+            <li><a href="setup.php" class="<?php if($thisPage == 'AdminSetup'){ echo 'active'; } ?>">Setup</a></li>
         </ul>
     </nav>
     <a href="userinfo.php" class="profile--icon">

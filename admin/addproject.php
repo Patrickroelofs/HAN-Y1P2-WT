@@ -4,7 +4,7 @@ session_start();
 if(!isset($_SESSION['uid'])){
     header('Location: index.php');
 }
-$thisPage = 'AddProject';
+$thisPage = 'AdminAddProject';
 ?>
 
 <!DOCTYPE html>
@@ -15,26 +15,13 @@ $thisPage = 'AddProject';
     <link rel="stylesheet" href="css/admin-stylesheet.css">
 </head>
 <body>
+<?php include('../includes/adminBar.inc.php'); ?>
 <header>
     <h1><a href="index.php">Admin</a></h1>
 </header>
 
 <section class="wrapper wrapper--flex">
-    <aside>
-        <nav>
-            <ul>
-                <li><a href="home.php">Home</a></li>
-                <li><a href="pages.php">Pages</a></li>
-                <li><a href="projects.php" class="active">Projects</a></li>
-                <li><a href="setup.php">Setup</a></li>
-            </ul>
-        </nav>
-        <a href="userinfo.php" class="profile--icon">
-            <span class="icon--circle">P</span>
-            <span class="icon--title">Patrick Roelofs</span>
-        </a>
-        <form action="includes/logout.inc.php" method="post"><button type="submit" name="logout-submit">Logout</button></form>
-    </aside>
+    <?php include('imports/navigation.php'); ?>
 
     <main>
         <form id="loginform" action="includes/addproject.inc.php" method="POST" enctype="multipart/form-data">
