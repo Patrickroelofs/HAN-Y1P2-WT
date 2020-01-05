@@ -3,7 +3,8 @@
         <ul>
             <li><a href="home.php" class="<?php if($thisPage == 'Home'){ echo 'active'; } ?>">Home</a></li>
             <li><a href="pages.php" class="<?php if($thisPage == 'Pages'){ echo 'active'; } ?>">Pages</a></li>
-            <li><a href="projects.php" class="<?php if($thisPage == 'Projects'){ echo 'active'; } ?>">Projects</a></li>
+            <li><a href="projects.php" class="<?php if($thisPage == 'Projects' || $thisPage == 'AddProject'){ echo 'active'; } ?>">Projects</a></li>
+            <li><a href="blog.php" class="<?php if($thisPage == 'Blog' || $thisPage == 'AddBlog'){ echo 'active'; } ?>">Blog</a></li>
             <li><a href="messages.php" class="<?php if($thisPage == 'Messages'){ echo 'active'; } ?>">Messages</a></li>
             <li><a href="setup.php" class="<?php if($thisPage == 'Setup'){ echo 'active'; } ?>">Setup</a></li>
         </ul>

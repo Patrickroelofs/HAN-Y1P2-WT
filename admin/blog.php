@@ -2,9 +2,9 @@
 session_start();
 
 if(!isset($_SESSION['uid'])){
-	header('Location: index.php');
+    header('Location: index.php');
 }
-$thisPage = 'AdminUserinfo';
+$thisPage = 'Blog';
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +12,7 @@ $thisPage = 'AdminUserinfo';
 <head>
     <title>Admin | Patrick Roelofs</title>
 
-    <?php include('imports/head.php'); ?>
+    <link rel="stylesheet" href="css/admin-stylesheet.css">
 </head>
 <body>
 <?php include('../includes/adminBar.inc.php'); ?>
@@ -24,8 +24,7 @@ $thisPage = 'AdminUserinfo';
     <?php include('imports/navigation.php'); ?>
 
     <main>
-
-
+        <a href="addblog.php">+ Add a Blog item</a>
     </main>
 </section>
 

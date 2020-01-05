@@ -7,7 +7,7 @@ session_start();
 if(!isset($_SESSION['uid'])){
 	header('Location: index.php');
 }
-$thisPage = 'Setup';
+$thisPage = 'AdminSetup';
 
 // Get filled in data from database
 $stmt = $connection->query('SELECT * FROM setup');
@@ -19,9 +19,10 @@ $row = $stmt->fetch(PDO::FETCH_OBJ);
 <head>
     <title>Admin | Patrick Roelofs</title>
 
-    <link rel="stylesheet" href="css/admin-stylesheet.css">
+    <?php include('imports/head.php'); ?>
 </head>
 <body>
+<?php include('../includes/adminBar.inc.php'); ?>
 <header>
     <h1><a href="index.php">Admin</a></h1>
 </header>

@@ -19,9 +19,10 @@ if($accountExists == true){
   <head>
     <title>Register</title>
 
-    <link rel="stylesheet" href="css/admin-stylesheet.css">
+      <?php include('imports/head.php'); ?>
   </head>
   <body id="index">
+  <?php include('../includes/adminBar.inc.php'); ?>
     <header class="center">
       <h1><a href="index.php">Register</a></h1>
     </header>

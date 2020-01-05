@@ -232,3 +232,22 @@ button:hover {
 	display: block;
 	padding: 12px 0;
 }
+
+.container {
+	max-width: 840px;
+	margin: 0 auto;
+}
+
+.container--large {
+	max-width: 1000px;
+}
+
+.admin-panel{
+	background: #333333;
+	padding: 16px;
+	color: white;
+}
+.admin-panel a{
+	color: white;
+	font-weight: bold;
+}

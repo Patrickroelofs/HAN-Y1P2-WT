@@ -5,17 +5,18 @@
         header('Location: index.php');
     }
 
-    $thisPage = 'Home';
+    $thisPage = 'AdminHome';
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Admin | Patrick Roelofs</title>
-
-    <link rel="stylesheet" href="css/admin-stylesheet.css">
+    <?php include('imports/head.php'); ?>
   </head>
   <body>
+    <?php include('../includes/adminBar.inc.php'); ?>
+
     <header>
       <h1><a href="index.php">Admin</a></h1>
     </header>
