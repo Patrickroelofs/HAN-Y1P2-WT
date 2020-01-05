@@ -8,7 +8,7 @@ $i = 0;
 foreach ($stmt as $project)
     if ($i < $limitProjects) { ?>
 
-    <a href="project.php" class="projectthumb">
+    <a href="project.php?project=<?= $project['id']; ?>" class="projectthumb">
         <figure>
             <img src="<?= $project['thumbnail'] ?>" alt="placeholder">
             <figcaption>
