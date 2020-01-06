@@ -2,11 +2,7 @@
 include '../includes/dbh.inc.php';
 
 // Check if user is logged in
-session_start();
-
-if(!isset($_SESSION['uid'])){
-	header('Location: index.php');
-}
+include('includes/sessionChecker.inc.php');
 $thisPage = 'AdminSetup';
 
 // Get filled in data from database

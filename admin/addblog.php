@@ -1,9 +1,5 @@
 <?php
-session_start();
-
-if(!isset($_SESSION['uid'])){
-    header('Location: index.php');
-}
+include('includes/sessionChecker.inc.php');
 $thisPage = 'AdminAddBlog';
 ?>
 

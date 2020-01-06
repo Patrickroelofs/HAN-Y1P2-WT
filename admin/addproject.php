@@ -1,10 +1,6 @@
 <?php
-session_start();
-
-if(!isset($_SESSION['uid'])){
-    header('Location: index.php');
-}
-$thisPage = 'AdminAddProject';
+    include('includes/sessionChecker.inc.php');
+    $thisPage = 'AdminAddProject';
 ?>
 
 <!DOCTYPE html>

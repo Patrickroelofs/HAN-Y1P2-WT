@@ -1,7 +1,7 @@
 <?php
 //todo: add editable thumbnail
 
-if(isset($_POST['editproject-submit'])) {
+if(isset($_POST['editblog-submit'])) {
 
     require '../../includes/dbh.inc.php';
     $date           = $_POST['date'];
@@ -12,12 +12,12 @@ if(isset($_POST['editproject-submit'])) {
 
     // change current data in table
     if(empty($title)){
-        header("Location: ../editproject.php?=EmptyFields");
+        header("Location: ../editblog.php?=EmptyFields");
         exit();
     } else {
         // start insert into setup table
         try{
-            $stmt = $connection->prepare("UPDATE portfolio.projects SET date=:date, title=:title, tags=:tags, description=:description, content=:content WHERE id = '{$_GET['project']}'");
+            $stmt = $connection->prepare("UPDATE portfolio.blog SET date=:date, title=:title, tags=:tags, description=:description, content=:content WHERE id = '{$_GET['blog']}'");
             $stmt->execute(array(
                 ':date' => $date,
                 ':title' => $title,
@@ -36,17 +36,17 @@ if(isset($_POST['editproject-submit'])) {
     }
 }
 
-if(isset($_POST['deleteproject-submit'])) {
+if(isset($_POST['deleteblog-submit'])) {
 
     require '../../includes/dbh.inc.php';
 
     try{
 
-        $stmt = $connection->prepare("DELETE FROM portfolio.projects WHERE id = '{$_GET['project']}'");
+        $stmt = $connection->prepare("DELETE FROM portfolio.blog WHERE id = '{$_GET['blog']}'");
         $stmt->execute();
 
         //send user back to setup
-        header("Location: ../projects.php?=deleted");
+        header("Location: ../blog.php?=deleted");
         exit();
 
     } catch(PDOException $e){

@@ -150,6 +150,19 @@ hr{
 	border: 1px solid black;
 }
 
+.admin-home > div{
+	margin-bottom: 64px;
+}
+.message em {
+	font-size: 0.8em;
+}
+.message h3{
+	padding-bottom: 16px;
+}
+.message hr{
+	margin: 16px 0;
+}
+
 /* ==========================================================================
 		FOOTER
 	 ========================================================================== */
@@ -186,6 +199,7 @@ input {
 	font-family: 'Work Sans', 'Open Sans', sans-serif;
 	color: black;
 	width: 100%;
+	margin-bottom: 20px;
 }
 
 textarea {

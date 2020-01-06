@@ -1,12 +1,12 @@
 <?php
 
-$stmt = $connection->prepare('SELECT * FROM projects');
-$stmt->execute();
+    $stmt = $connection->prepare('SELECT * FROM projects');
+    $stmt->execute();
 
-$i = 0;
+    $i = 0;
 
-foreach ($stmt as $project)
-    if ($i < $limitProjects) { ?>
+    foreach ($stmt as $project)
+        if ($i < $limitProjects) { ?>
 
         <a href="editproject.php?project=<?= $project['id']; ?>" class="projectthumb">
             <figure>

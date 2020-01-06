@@ -1,16 +1,12 @@
 <?php
-session_start();
+    require '../includes/dbh.inc.php';
+    include('includes/sessionChecker.inc.php');
+    $thisPage = 'AdminEditProject';
 
-if(!isset($_SESSION['uid'])){
-	header('Location: index.php');
-}
-$thisPage = 'AdminEditProject';
+    $stmt = $connection->prepare("SELECT * FROM projects WHERE id = '{$_GET['project']}'");
+    $stmt->execute();
 
-$stmt = $connection->prepare("SELECT * FROM projects WHERE id = '{$_GET['project']}'");
-$stmt->execute();
-
-$result = $stmt->fetch(PDO::FETCH_ASSOC);
-
+    $result = $stmt->fetch(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -25,40 +21,36 @@ $result = $stmt->fetch(PDO::FETCH_ASSOC);
 <?php include('imports/navigation.php'); ?>
 
 <main class="container container--large">
-	<form id="loginform" action="includes/editproject.inc.php" method="POST" enctype="multipart/form-data">
+	<form id="editproject" action="includes/editproject.inc.php?project=<?= $result['id'] ?>" method="POST" enctype="multipart/form-data">
 		<fieldset>
 			<div>
 				<label>Title</label>
-				<input name="title" type="text">
+				<input name="title" type="text" value="<?= $result['title']; ?>">
 			</div>
 
 			<div>
 				<label>Tags</label>
-				<input name="tags" type="text">
+				<input name="tags" type="text" value="<?= $result['tags']; ?>">
 			</div>
 
 			<div>
 				<label>Date</label>
-				<input name="date" type="date">
+				<input name="date" type="date" value="<?= $result['date']; ?>">
 			</div>
 
 			<div>
 				<label>Description</label>
-				<input name="description" type="text">
-			</div>
-
-			<div>
-				<label>Thumbnail</label>
-				<input id="thumbnail" name="thumbnail" type="file">
+				<input name="description" type="text" value="<?= $result['description']; ?>">
 			</div>
 
 			<div>
 				<label>Content</label>
-				<textarea name="content"></textarea>
+				<textarea name="content" value="<?= $result['content']; ?>"></textarea>
 			</div>
 
 			<div class="center">
-				<button name="addproject-submit" class="button" type="submit">Edit Project</button>
+				<button name="editproject-submit" class="button" type="submit">Edit Project</button>
+                <button name="deleteproject-submit" class="button" type="submit">Delete Project</button>
 			</div>
 		</fieldset>
 	</form>

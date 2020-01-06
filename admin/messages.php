@@ -2,16 +2,9 @@
 //TODO: Display message in admin
 //TODO: Click on message title do display in single message view
 
-include '../includes/dbh.inc.php';
-
-session_start();
-
-if(!isset($_SESSION['uid'])){
-    header('Location: index.php');
-}
+    include '../includes/dbh.inc.php';
+    include('includes/sessionChecker.inc.php');
     $thisPage = 'AdminMessages';
-
-    $stmt = $connection->query('SELECT * FROM messages');
 ?>
 
 <!DOCTYPE html>
@@ -26,16 +19,10 @@ if(!isset($_SESSION['uid'])){
 <?php include('imports/navigation.php'); ?>
 
 <main class="container container--large">
-<?php foreach($stmt as $message) { ?>
-    <div>
-        <div>
-            <strong><?php echo $message['date']; ?> | <?php echo $message['name']; ?></strong>
-            <h3><?php echo $message['subject']; ?></h3>
-            <p><?php echo $message['content']; ?></p>
-            <a href="mailto: <?php echo $message['email']; ?>"><?php echo $message['email']; ?></a>
-        </div>
-    </div>
-<?php } ?>
+    <?php
+        $limitMessages = 999;
+        include('imports/messages.php');
+    ?>
 </main>
 
 <?php include('imports/footer.php'); ?>

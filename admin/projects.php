@@ -3,11 +3,8 @@
 //TODO: Display projects
 
 require '../includes/dbh.inc.php';
-session_start();
+include('includes/sessionChecker.inc.php');
 
-if(!isset($_SESSION['uid'])){
-    header('Location: index.php');
-}
 $thisPage = 'AdminProjects';
 ?>
 
