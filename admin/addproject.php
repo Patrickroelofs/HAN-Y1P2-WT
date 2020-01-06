@@ -43,7 +43,7 @@ $thisPage = 'AdminAddProject';
 
             <div>
                 <label>Thumbnail</label>
-                <input name="thumbnail[]" type="file">
+                <input id="thumbnail" name="thumbnail" type="file">
             </div>
 
             <div>

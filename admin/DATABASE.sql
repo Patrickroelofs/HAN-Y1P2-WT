@@ -131,14 +131,15 @@ INSERT INTO setup (title, author, description, keywords) VALUES (
 CREATE TABLE blog
 (
     id              INT				UNSIGNED	AUTO_INCREMENT,
-    date            DATE            NOT NULL,
-    title           TINYTEXT        NOT NULL,
-    tags            TINYTEXT        NOT NULL,
-    description     MEDIUMTEXT      NOT NULL,
-    content         LONGTEXT        NOT NULL,
+    thumbnail		TINYTEXT		NOT NULL,
+    date            DATE            NULL,
+    title           TINYTEXT        NULL,
+    tags            TINYTEXT        NULL,
+    description     MEDIUMTEXT      NULL,
+    content         LONGTEXT        NULL,
 
-    CONSTRAINT blog_pk
-		PRIMARY KEY (id)
+    CONSTRAINT projects_pk
+        PRIMARY KEY (id)
 );
 
 /* ***************************** */

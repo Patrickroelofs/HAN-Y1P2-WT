@@ -12,14 +12,50 @@ $thisPage = 'AdminAddBlog';
 <head>
     <title>Admin | Patrick Roelofs</title>
 
-    <link rel="stylesheet" href="css/admin-stylesheet.css">
+	<?php include('imports/head.php'); ?>
 </head>
 <body>
 <?php include('../includes/adminBar.inc.php'); ?>
 <?php include('imports/navigation.php'); ?>
 
 <main class="container container--large">
+    <form id="loginform" action="includes/addblog.inc.php" method="POST" enctype="multipart/form-data">
+        <fieldset>
+            <div>
+                <label>Title</label>
+                <input name="title" type="text">
+            </div>
 
+            <div>
+                <label>Tags</label>
+                <input name="tags" type="text">
+            </div>
+
+            <div>
+                <label>Date</label>
+                <input name="date" type="date">
+            </div>
+
+            <div>
+                <label>Description</label>
+                <input name="description" type="text">
+            </div>
+
+            <div>
+                <label>Thumbnail</label>
+                <input name="thumbnail" id="thumbnail" type="file">
+            </div>
+
+            <div>
+                <label>Content</label>
+                <textarea name="content"></textarea>
+            </div>
+
+            <div class="center">
+                <button name="addblog-submit" class="button" type="submit">Add Blog</button>
+            </div>
+        </fieldset>
+    </form>
 </main>
 
 <?php include('imports/footer.php'); ?>
