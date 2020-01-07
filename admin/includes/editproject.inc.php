@@ -4,6 +4,7 @@
 if(isset($_POST['editproject-submit'])) {
 
     require '../../includes/dbh.inc.php';
+
     $date           = $_POST['date'];
     $title          = $_POST['title'];
     $tags           = $_POST['tags'];
@@ -41,12 +42,27 @@ if(isset($_POST['deleteproject-submit'])) {
     require '../../includes/dbh.inc.php';
 
     try{
+        //TODO: Cleaner delete image
+        //Search and destroy files
+        $stmt1 = $connection->prepare("SELECT thumbnail from portfolio.projects WHERE id = '{$_GET['project']}'");
+        $stmt1->execute();
 
-        $stmt = $connection->prepare("DELETE FROM portfolio.projects WHERE id = '{$_GET['project']}'");
-        $stmt->execute();
+        $file = $stmt1->fetch(PDO::FETCH_COLUMN);
+        unlink('../../'.$file);
+
+        //Search and destroy folder
+        $stmt2 = $connection->prepare("SELECT title from portfolio.projects WHERE id = '{$_GET['project']}'");
+        $stmt2->execute();
+
+        $title = $stmt2->fetch(PDO::FETCH_COLUMN);
+        rmdir( '../../images/thumbnails/projects/'.substr(str_replace(' ', '', $title), 0, 16) );
+
+        //Delete project from database
+        $stmt3 = $connection->prepare("DELETE FROM portfolio.projects WHERE id = '{$_GET['project']}'");
+        $stmt3->execute();
 
         //send user back to setup
-        header("Location: ../projects.php?=deleted");
+        header("Location: ../projects.php?=$title");
         exit();
 
     } catch(PDOException $e){

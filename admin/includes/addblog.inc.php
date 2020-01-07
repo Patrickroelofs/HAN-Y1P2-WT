@@ -14,7 +14,7 @@ if(isset($_POST['addblog-submit'])) {
 	$ext = pathinfo($thumbnail, PATHINFO_EXTENSION);
 
 	$newname = rand() . '.' . $ext;
-	$newfolder = substr(str_replace(' ', '', $title), 0, 8);
+	$newfolder = substr(str_replace(' ', '', $title), 0, 16);
 
 	if(empty($title)) {
 

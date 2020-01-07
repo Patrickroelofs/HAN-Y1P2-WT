@@ -41,7 +41,22 @@ if(isset($_POST['deleteblog-submit'])) {
     require '../../includes/dbh.inc.php';
 
     try{
+        //TODO: Cleaner delete image
+        //Search and destroy files
+        $stmt1 = $connection->prepare("SELECT thumbnail from portfolio.blog WHERE id = '{$_GET['blog']}'");
+        $stmt1->execute();
 
+        $file = $stmt1->fetch(PDO::FETCH_COLUMN);
+        unlink('../../'.$file);
+
+        //Search and destroy folder
+        $stmt2 = $connection->prepare("SELECT title from portfolio.blog WHERE id = '{$_GET['blog']}'");
+        $stmt2->execute();
+
+        $title = $stmt2->fetch(PDO::FETCH_COLUMN);
+        rmdir( '../../images/thumbnails/blog/'.substr(str_replace(' ', '', $title), 0, 16) );
+
+        //Delete blogitem from database
         $stmt = $connection->prepare("DELETE FROM portfolio.blog WHERE id = '{$_GET['blog']}'");
         $stmt->execute();
 
