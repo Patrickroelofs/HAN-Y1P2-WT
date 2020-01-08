@@ -15,7 +15,7 @@ $thisPage = 'AdminAddBlog';
 <?php include('imports/navigation.php'); ?>
 
 <main class="container container--large">
-    <form id="loginform" action="includes/addblog.inc.php" method="POST" enctype="multipart/form-data">
+    <form id="loginform" action="includes/blog.inc.php" method="POST" enctype="multipart/form-data">
         <fieldset>
             <div>
                 <label>Title</label>

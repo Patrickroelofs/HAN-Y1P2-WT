@@ -19,19 +19,16 @@ $thisPage = 'AdminProjects';
 <?php include('../includes/adminBar.inc.php'); ?>
 <?php include('imports/navigation.php'); ?>
 
-<section class="wrapper wrapper--flex">
+<main class="container container--large">
+    <a href="addproject.php">+ Add a Project</a>
 
-    <main class="container container--large">
-        <a href="addproject.php">+ Add a Project</a>
-
-        <div class="projects__column">
-            <?php
-                $limitProjects = 999;
-                include ('imports/projects.php');
-            ?>
-        </div>
-    </main>
-</section>
+    <div class="projects__column">
+    <?php
+        $limitProjects = 999;
+        include ('imports/projects.php');
+    ?>
+    </div>
+</main>
 
 <?php include('imports/footer.php'); ?>
 </body>

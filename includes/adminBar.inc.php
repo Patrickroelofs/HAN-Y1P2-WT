@@ -11,7 +11,7 @@ if(isset($_SESSION['uid'])){ ?>
             Logged in as: <?php echo $_SESSION['uid'] ?> |
 
             <?php
-                if($thisPage == 'AdminHome' || $thisPage == 'AdminMessages' || $thisPage == 'AdminPages' || $thisPage == 'AdminProjects' || $thisPage == 'AdminSetup' || $thisPage == 'AdminUserinfo' || $thisPage =='AdminAddBlog' || $thisPage == 'AdminAddProject' || $thisPage == 'AdminBlog' || $thisPage == 'AdminViewMessage'){
+                if($thisPage == 'AdminHome' || $thisPage == 'AdminMessages' || $thisPage == 'AdminPages' || $thisPage == 'AdminProjects' || $thisPage == 'AdminSetup' || $thisPage == 'AdminUserinfo' || $thisPage =='AdminAddBlog' || $thisPage == 'AdminAddProject' || $thisPage == 'AdminEditProject' || $thisPage == 'AdminBlog' || $thisPage == 'AdminViewMessage'){
                     echo "<a href='../index.php'>Homepage</a> | ";
                 } else {
                     echo "<a href='admin/index.php'>Admin Panel</a> | ";

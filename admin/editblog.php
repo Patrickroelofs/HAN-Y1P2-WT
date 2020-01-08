@@ -22,7 +22,7 @@ $result = $stmt->fetch(PDO::FETCH_ASSOC);
 <?php include('imports/navigation.php'); ?>
 
 <main class="container container--large">
-    <form id="editblog" action="includes/editblog.inc.php?blog=<?= $result['id'] ?>" method="POST" enctype="multipart/form-data">
+    <form id="editblog" action="includes/blog.inc.php?blog=<?= $result['id'] ?>" method="POST" enctype="multipart/form-data">
         <fieldset>
             <div>
                 <label>Title</label>
