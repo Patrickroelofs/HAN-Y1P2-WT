@@ -1,1 +1,0 @@
-INSERT INTO portfolio.setup (title, author, description, keywords) VALUES ('Patrick Roelofs', 'Patrick Roelofs', 'Patrick Roelofs is student, designer and developer in the Netherlands.', 'Developer, Designer, Interaction, UX, Webdeveloper, HTML, CSS, PHP, JS');
