@@ -111,6 +111,27 @@ hr {
 	border: 1px solid var(--theme-color);
 }
 
+.success{
+	padding: 12px;
+	background: #29fca5;
+	box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+	margin: 16px 0;
+}
+
+.error{
+	padding: 12px;
+	background: #E01F3D;
+	box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+	margin: 16px 0;
+}
+
+.warning{
+	padding: 12px;
+	background: #FDDC0D;
+	box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+	margin: 16px 0;
+}
+
 /* ==========================================================================
 		BUTTONS
 	 ========================================================================== */

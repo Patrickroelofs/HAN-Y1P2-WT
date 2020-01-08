@@ -1,9 +1,7 @@
 <?php
-//TODO: Display message in admin
-//TODO: Click on message title do display in single message view
-
     include '../includes/dbh.inc.php';
     include('includes/sessionChecker.inc.php');
+
     $thisPage = 'AdminMessages';
 ?>
 

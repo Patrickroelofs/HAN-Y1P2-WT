@@ -1,13 +1,15 @@
 <?php
+//TODO: Put fields back in when something goes wrong
+
 session_start();
 $accountExists = true;
 
-if(isset($_SESSION['uid'])){
-	header('Location: home.php');
-	exit();
+if (isset($_SESSION['uid'])) {
+    header('Location: home.php');
+    exit();
 }
 
-if($accountExists == true){
+if ($accountExists == true) {
     header("Location: home.php");
     exit();
 }
@@ -16,45 +18,51 @@ if($accountExists == true){
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <title>Register</title>
 
-      <?php include('imports/head.php'); ?>
-  </head>
-  <body id="index">
-  <?php include('../includes/adminBar.inc.php'); ?>
-    <header class="center">
-      <h1><a href="index.php">Register</a></h1>
-    </header>
+    <?php include('imports/head.php'); ?>
+</head>
+<body>
+<?php include('../includes/adminBar.inc.php'); ?>
+<header class="center">
+    <h1><a href="index.php">Register</a></h1>
+</header>
 
-    <main class="container container--large">
-      <form id="loginform" action="includes/register.inc.php" method="POST">
+<main class="container container--large">
+
+    <?php
+        $message = "<strong>Warning!</strong> Double check your fields, something is wrong!";
+        include('../includes/warningsAndErrors.inc.php');
+    ?>
+
+    <form id="loginform" action="includes/register.inc.php" method="POST">
         <fieldset>
-          <div>
-            <label>Username</label>
-            <input name="uid" type="text">
-          </div>
+            <div>
+                <label>Username</label>
+                <input name="uid" type="text">
+            </div>
 
-          <div>
-            <label>Email</label>
-            <input name="email" type="email">
-          </div>
+            <div>
+                <label>Email</label>
+                <input name="email" type="email">
+            </div>
 
-          <div>
-            <label>Password</label>
-            <input name="pwd" type="password">
-          </div>
+            <div>
+                <label>Password</label>
+                <input name="pwd" type="password">
+            </div>
 
-          <div>
-            <label>re-type Password</label>
-            <input name="pwd-repeat" type="password">
-          </div>
+            <div>
+                <label>re-type Password</label>
+                <input name="pwd-repeat" type="password">
+            </div>
 
-          <div class="center">
-            <button name="register-submit" class="button" type="submit">Register</button>
-          </div>
+            <div class="center">
+                <button name="register-submit" class="button" type="submit">Register</button>
+            </div>
         </fieldset>
-      </form>
-    </main>
-  </body>
+    </form>
+</main>
+</body>
 </html>

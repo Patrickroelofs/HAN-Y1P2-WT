@@ -24,6 +24,12 @@
 	<main class="main--small">
 		<div class="container">
 			<div class="contactform">
+
+                <?php
+                    $message = "<strong>Message sent</strong>, Thank you! I will reply with an email asap!";
+                    include('includes/warningsAndErrors.inc.php');
+                ?>
+
 				<form class="contactform__form" action="includes/sendMessage.inc.php" method="post" enctype="multipart/form-data" >
 					<fieldset>
 						<div>

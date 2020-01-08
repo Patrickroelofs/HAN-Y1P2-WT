@@ -1,13 +1,15 @@
 <?php
-require '../includes/dbh.inc.php';
-include('includes/sessionChecker.inc.php');
+//TODO: Editing thumbnail is not possible without Javascript
 
-$thisPage = 'AdminEditBlog';
+    require '../includes/dbh.inc.php';
+    include('includes/sessionChecker.inc.php');
 
-$stmt = $connection->prepare("SELECT * FROM blog WHERE id = '{$_GET['blog']}'");
-$stmt->execute();
+    $thisPage = 'AdminEditBlog';
 
-$result = $stmt->fetch(PDO::FETCH_ASSOC);
+    $stmt = $connection->prepare("SELECT * FROM blog WHERE id = '{$_GET['blog']}'");
+    $stmt->execute();
+
+    $result = $stmt->fetch(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>

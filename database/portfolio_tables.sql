@@ -27,12 +27,6 @@ CREATE TABLE admins
         PRIMARY KEY (id)
 );
 
-INSERT INTO admins (username, email, password) VALUES (
-    'stolenbows',
-    'stolenbows@gmail.com',
-    '$2y$10$sRlr8mgKjYTzOUFoCO21QOeOiUzkQqJ8nmBXQVGcgK82M9KFOMnOS'
-);
-
 
 /* ***************************** */
 /**        Projects              */
@@ -51,61 +45,6 @@ CREATE TABLE projects
 		PRIMARY KEY (id)
 );
 
-INSERT INTO projects VALUES (
-	'1',
-	'images/thumbnails/thumbnail_energy.jpg',
-	'2019-12-14',
-	'Energy Challenge',
-	'UX Prototype',
-	'This project is about the course ''Interaction 4 Mobile''. Our task: Work on a major consumer mobile platform for an energy company.',
-	''
-),
-(
-	'2',
-	'images/thumbnails/thumbnail_honig.jpg',
-	'2019-12-14',
-	'Honigevents',
-	'Back-end System',
-	'Honigevents is an event management system for the company HonigEvents who organize events at the Honigcomplex in Nijmegen, The Netherlands.',
-	''
-),
-(
-	'3',
-	'images/thumbnails/thumbnail_nzayi.jpg',
-	'2019-12-14',
-	'Nzayi',
-	'Website',
-	'Nzayi is a design bureau in Angola, their site was designed by Vladimir da Costa and developed by me.',
-	''
-),
-(
-	'4',
-	'images/thumbnails/thumbnail_kaluanda.jpg',
-	'2019-12-14',
-	'Kaluandafest',
-	'Website',
-	'The website for Kaluandafest 2019 is live! Kaluandafest is a yearly event in Angola.',
-	''
-),
-(
-	'5',
-	'images/thumbnails/thumbnail_retail.jpg',
-	'2019-12-14',
-	'The future of Retail',
-	'UX Prototype',
-	'Devise and elaborate a concept as a group project for Adidas. The ultimate goal was to develop a prototype that could be used in a kiosk within a retail environment.',
-	''
-),
-(
-	'6',
-	'images/thumbnails/thumbnail_divingfortreasure.PNG',
-	'2019-12-14',
-	'Diving for Treasure',
-	'Processing game',
-	'Diving for Treasure is a little Processing game in the style of Spongebob the Squarepants.',
-	''
-);
-
 
 /* ***************************** */
 /**        Setup                 */
@@ -116,13 +55,6 @@ CREATE TABLE setup
     author          TINYTEXT        NOT NULL,
     description     MEDIUMTEXT      NOT NULL,
     keywords        MEDIUMTEXT      NOT NULL
-);
-
-INSERT INTO setup (title, author, description, keywords) VALUES (
-    'Patrick Roelofs',
-    'Patrick Roelofs',
-    'Patrick Roelofs is student, designer and developer in the Netherlands.',
-    'Developer, Designer, Interaction, UX, Webdeveloper, HTML, CSS, PHP, JS'
 );
 
 /* ***************************** */
@@ -157,9 +89,6 @@ CREATE TABLE messages
 	CONSTRAINT messages_pk
 		PRIMARY KEY (id)
 );
-
-INSERT INTO messages (date, name, email, subject, content)
-VALUES ('2020-1-1', 'Patrick Roelofs', 'Stolenbows@gmail.com', 'My message', 'My Message Text');
 
 /* ***************************** */
 /**        Experiences           */

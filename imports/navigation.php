@@ -20,35 +20,8 @@
             <ul>
                 <li><a href="index.php" class="nav__link <?php if ($thisPage == 'Home') echo 'nav--active' ?>">Home</a></li>
                 <li><a href="about.php" class="nav__link <?php if ($thisPage == "About") echo "nav--active"; ?>">About</a></li>
-				<?php
-                    // If no projects exist hide the navigation button
-
-                    $stmt = $connection->prepare('SELECT * FROM portfolio.projects');
-                    $stmt->execute();
-
-				    $result = $stmt->fetch(PDO::FETCH_ASSOC);
-
-				    if($result == ''){
-
-                    } else {
-				?>
                 <li><a href="projects.php" class="nav__link <?php if ($thisPage == 'Projects' || $thisPage == 'Project') echo 'nav--active' ?>">Projects</a></li>
-                <?php } ?>
-
-	            <?php
-	            // If no blogitems exist hide the navigation button
-
-	            $stmt = $connection->prepare('SELECT * FROM portfolio.blog');
-	            $stmt->execute();
-
-	            $result = $stmt->fetch(PDO::FETCH_ASSOC);
-
-	            if($result == ''){
-
-	            } else {
-	            ?>
                 <li><a href="blog.php" class="nav__link <?php if ($thisPage == 'Blog') echo 'nav--active' ?>">Blog</a></li>
-	            <?php } ?>
                 <li><a href="contact.php" class="nav__link <?php if ($thisPage == 'Contact') echo 'nav--active' ?>">Contact</a></li>
             </ul>
         </div>

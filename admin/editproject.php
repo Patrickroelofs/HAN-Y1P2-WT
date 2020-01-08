@@ -1,6 +1,9 @@
 <?php
+    //TODO: Editing thumbnail is not possible without Javascript
+
     require '../includes/dbh.inc.php';
     include('includes/sessionChecker.inc.php');
+
     $thisPage = 'AdminEditProject';
 
     $stmt = $connection->prepare("SELECT * FROM projects WHERE id = '{$_GET['project']}'");

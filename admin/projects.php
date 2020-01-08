@@ -1,6 +1,4 @@
 <?php
-//TODO: Edit and Delete projects
-//TODO: Display projects
 
 require '../includes/dbh.inc.php';
 include('includes/sessionChecker.inc.php');

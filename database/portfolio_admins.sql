@@ -1,0 +1,1 @@
+INSERT INTO portfolio.admins (id, username, email, password) VALUES (1, 'stolenbows', 'stolenbows@gmail.com', '$2y$10$sRlr8mgKjYTzOUFoCO21QOeOiUzkQqJ8nmBXQVGcgK82M9KFOMnOS');

@@ -27,7 +27,7 @@ if(isset($_POST['send-message'])) {
                 ':content' => $content
             ));
 
-            header("Location: ../index.php?=success");
+            header("Location: ../contact.php?message=success");
             exit();
 
 

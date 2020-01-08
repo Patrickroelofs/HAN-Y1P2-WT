@@ -11,27 +11,27 @@ if(isset($_POST['register-submit'])) {
 
 	//No input given
 	if(empty($username) || empty($email) || empty($password) || empty($passwordRepeat)){
-		header("Location: ../register.php?error=emptyfields&uid=".$username."&email=".$email);
+		header("Location: ../register.php?message=warning");
 		exit();
 
 	// Invalid UID & Email
 	} else if (!filter_var($email, FILTER_VALIDATE_EMAIL) && !preg_match("/^[a-zA-Z0-9]*$/", $username)) {
-		header("Location: ../register.php?error=invalidemailuid");
+		header("Location: ../register.php?message=warning");
 		exit();
 
 	// Invalid Email
 	} else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-		header("Location: ../register.php?error=invalidemail&uid=".$username);
+		header("Location: ../register.php?message=warning");
 		exit();
 
 	// Invalid Username
 	} else if (!preg_match("/^[a-zA-Z0-9]*$/", $username)) {
-		header("Location: ../register.php?error=invaliduid&email=".$email);
+		header("Location: ../register.php?message=warning");
 		exit();
 
 	// Invalid Password Check
 	} else if ($password !== $passwordRepeat) {
-		header("Location: ../register.php?error=passwordcheck&uid=".$username."&email=".$email);
+		header("Location: ../register.php?message=warning");
 		exit();
 
 	} else {
@@ -46,7 +46,7 @@ if(isset($_POST['register-submit'])) {
 			));
 
 			// Send user to login
-			header("Location: ../index.php?=success");
+			header("Location: ../index.php");
 			exit();
 
 		} catch(PDOException $e){

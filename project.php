@@ -1,18 +1,13 @@
 <?php
-    //TODO: Add project title to HTML title
     //TODO: Display Project content
 
-include 'includes/dbh.inc.php';
-
-$stmt = $connection->prepare("SELECT * FROM projects WHERE id = '{$_GET['project']}'");
-$stmt->execute();
-
-$result = $stmt->fetch(PDO::FETCH_ASSOC);
-
-?>
-
-<?php
     include 'includes/dbh.inc.php';
+
+    $stmt = $connection->prepare("SELECT * FROM projects WHERE id = '{$_GET['project']}'");
+    $stmt->execute();
+
+    $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
     $thisPage = 'Project';
 ?>
 <!DOCTYPE html>
@@ -30,7 +25,7 @@ $result = $stmt->fetch(PDO::FETCH_ASSOC);
 		<div class="container container--large center">
 			<div class="header__blocktext">
 
-				<h2><?= $result['title']; ?></h2>
+				<h2><?= $result["title"]; ?></h2>
 
 			</div>
 		</div>
