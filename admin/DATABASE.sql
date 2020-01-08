@@ -167,6 +167,7 @@ VALUES ('2020-1-1', 'Patrick Roelofs', 'Stolenbows@gmail.com', 'My message', 'My
 CREATE TABLE experiences
 (
     id				INT				NOT NULL,
+    section         INT             NOT NULL,
     location		TINYTEXT		NOT NULL,
     title			TINYTEXT		NOT NULL,
     url				TINYTEXT		NOT NULL,
