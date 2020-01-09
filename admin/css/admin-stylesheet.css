@@ -185,7 +185,7 @@ textarea, input, button, fieldset {
 	outline: none;
 }
 
-#loginform label{
+form label{
 	display: block;
 	padding: 12px 0;
 	font-weight: bold;
