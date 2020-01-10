@@ -1,6 +1,4 @@
 <?php
-    //TODO: Display Project content
-
     include 'includes/dbh.inc.php';
 
     $stmt = $connection->prepare("SELECT * FROM projects WHERE id = '{$_GET['project']}'");

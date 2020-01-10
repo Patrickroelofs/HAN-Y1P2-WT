@@ -625,6 +625,18 @@ select {
 	color: var(--text-color);
 }
 
+#searchform{
+	margin: 16px 0;
+}
+
+#searchform input{
+	padding: 8px 8px;
+}
+
+#searchform button{
+	margin: 0 12px;
+}
+
 /* ==========================================================================
 		ABOUT PAGE
 	 ========================================================================== */

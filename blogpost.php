@@ -1,15 +1,18 @@
 <?php
-//TODO: Display blog post
-?>
-<?php
-include 'includes/dbh.inc.php';
-$thisPage = 'Blog';
+    include 'includes/dbh.inc.php';
+
+    $stmt = $connection->prepare("SELECT * FROM blog WHERE id = '{$_GET['blogitem']}'");
+    $stmt->execute();
+
+    $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    $thisPage = 'BlogPost';
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title><?= $thisPage ?> | Patrick Roelofs</title>
+    <title><?= $result['title']; ?> | Patrick Roelofs</title>
     <?php include('imports/head.php'); ?>
 </head>
 
@@ -17,11 +20,19 @@ $thisPage = 'Blog';
 <?php include('imports/navigation.php'); ?>
 
 <header class="header">
+    <div class="container container--large center">
+        <div class="header__blocktext">
 
+            <h2><?= $result["title"]; ?></h2>
+
+        </div>
+    </div>
 </header>
 
-<main>
-
+<main class="project">
+    <div class="container container--large">
+        <?= $result['content']; ?>
+    </div>
 </main>
 
 <?php include('imports/footer.php'); ?>
