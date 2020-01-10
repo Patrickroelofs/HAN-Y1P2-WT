@@ -48,7 +48,7 @@
 
 			<div>
 				<label>Content</label>
-				<textarea name="content" value="<?= $result['content']; ?>"></textarea>
+				<textarea name="content" rows="24"><?= $result['content']; ?></textarea>
 			</div>
 
 			<div class="center">

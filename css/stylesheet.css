@@ -631,6 +631,7 @@ select {
 
 #searchform input{
 	padding: 8px 8px;
+	box-shadow: none;
 }
 
 #searchform button{

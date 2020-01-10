@@ -44,7 +44,7 @@
 
             <div>
                 <label>Content</label>
-                <textarea name="content"></textarea>
+                <textarea name="content" rows="24"></textarea>
             </div>
 
             <div class="center">

@@ -17,7 +17,14 @@
 
     <main class="container container--large admin-home">
         <div>
-            <h2>Recent Blog items</h2>
+            <?php
+                $stmt = $connection->prepare('SELECT * FROM blog');
+                $stmt->execute();
+
+                if(!$stmt->rowCount() <= 0){
+                    echo '<h2>Recent Blog items</h2>';
+                }
+            ?>
             <div class="projects__column">
                 <?php
                     $limitBlog = 2;
@@ -28,7 +35,14 @@
 
 
         <div>
-            <h2>Recent Projects</h2>
+            <?php
+                $stmt = $connection->prepare('SELECT * FROM projects');
+                $stmt->execute();
+
+                if(!$stmt->rowCount() <= 0){
+                    echo '<h2>Recent Projects</h2>';
+                }
+            ?>
             <div class="projects__column">
                 <?php
                     $limitProjects = 2;
@@ -38,7 +52,14 @@
         </div>
 
         <div>
-            <h2>Recent Messages</h2>
+            <?php
+                $stmt = $connection->prepare('SELECT * FROM messages');
+                $stmt->execute();
+
+                if(!$stmt->rowCount() <= 0){
+                    echo '<h2>Recent Messages</h2>';
+                }
+            ?>
             <?php
                 $limitMessages = 3;
                 include('imports/messages.php');
