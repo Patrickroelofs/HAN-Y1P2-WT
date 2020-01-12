@@ -1,5 +1,4 @@
 <?php
-//TODO: Put fields back in when something goes wrong
 
 if(isset($_POST['login-submit'])) {
 
@@ -17,7 +16,7 @@ if(isset($_POST['login-submit'])) {
 	$result = $stmt->fetch(PDO::FETCH_COLUMN);
 
 	if(empty($emailuid) || empty($password)) {
-		header("Location: ../index.php?message=warning");
+		header("Location: ../index.php?message=warning&username=$emailuid");
 		exit();
 
 	} else if(password_verify($password, $result)) {

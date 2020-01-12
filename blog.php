@@ -18,7 +18,7 @@
             <div class="header__blocktext">
                 <h2>Check out these cool blog posts.</h2>
             </div>
-            <form id="searchform" action="" method="POST">
+            <form id="searchform" action="<?=$_SERVER['PHP_SELF'];?>" method="POST">
                 <input type="text" name="field" placeholder="Search..."><button type="submit" name="search" class="button button--green">Submit</button>
             </form>
         </div>

@@ -330,3 +330,17 @@ button:hover {
 	margin: 16px 0;
 	color: white;
 }
+
+.viewmessage a{
+	padding-bottom: 32px;
+	display: inline-block;
+}
+
+.viewmessage em{
+	padding-bottom: 32px;
+	display: block;
+}
+
+.viewmessage p{
+	padding-bottom: 32px;
+}

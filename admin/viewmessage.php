@@ -21,7 +21,8 @@
 <?php include('../includes/adminBar.inc.php'); ?>
 <?php include('imports/navigation.php'); ?>
 
-<main class="container container--large">
+<main class="container container--large viewmessage">
+    <a href="messages.php">Return to all messages</a>
     <h1><?= $result['subject']; ?></h1>
     <em><?= $result['date']; ?> | <?= $result['name']; ?></em>
 

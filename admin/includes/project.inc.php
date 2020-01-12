@@ -51,7 +51,6 @@ if(isset($_POST['addproject-submit'])) {
 	}
 }
 
-//todo: add editable thumbnail
 
 if (isset($_POST['editproject-submit'])) {
 

@@ -1,5 +1,4 @@
 <?php
-//TODO: Editing thumbnail is not possible without Javascript
 
     require '../includes/dbh.inc.php';
     include('includes/sessionChecker.inc.php');

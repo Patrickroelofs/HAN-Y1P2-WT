@@ -51,7 +51,6 @@ if(isset($_POST['addblog-submit'])) {
 	}
 }
 
-//todo: add editable thumbnail
 
 if(isset($_POST['editblog-submit'])) {
 

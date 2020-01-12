@@ -30,7 +30,7 @@
 	</header>
 
 	<main class="project">
-		<div class="container container--large">
+		<div class="container container--small">
             <?= $result['content']; ?>
 		</div>
 	</main>

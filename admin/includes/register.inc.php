@@ -11,7 +11,7 @@ if(isset($_POST['register-submit'])) {
 
 	//No input given
 	if(empty($username) || empty($email) || empty($password) || empty($passwordRepeat)){
-		header("Location: ../register.php?message=warning");
+		header("Location: ../register.php?message=warning&username=$username&email=$email");
 		exit();
 
 	// Invalid UID & Email
@@ -26,12 +26,12 @@ if(isset($_POST['register-submit'])) {
 
 	// Invalid Username
 	} else if (!preg_match("/^[a-zA-Z0-9]*$/", $username)) {
-		header("Location: ../register.php?message=warning");
+		header("Location: ../register.php?message=warning&email=$email");
 		exit();
 
 	// Invalid Password Check
 	} else if ($password !== $passwordRepeat) {
-		header("Location: ../register.php?message=warning");
+		header("Location: ../register.php?message=warning&username=$username&email=$email");
 		exit();
 
 	} else {

@@ -1,8 +1,7 @@
 <?php
-//TODO: Put fields back in when something goes wrong
 
 session_start();
-$accountExists = true;
+$accountExists = false;
 
 if (isset($_SESSION['uid'])) {
     header('Location: home.php');
@@ -40,12 +39,12 @@ if ($accountExists == true) {
         <fieldset>
             <div>
                 <label>Username</label>
-                <input name="uid" type="text">
+                <input name="uid" type="text" value="<?php if(empty($_GET['username'])){} else { echo $_GET['username']; } ?>">
             </div>
 
             <div>
                 <label>Email</label>
-                <input name="email" type="email">
+                <input name="email" type="email" value="<?php if(empty($_GET['email'])){} else { echo $_GET['email']; } ?>">
             </div>
 
             <div>

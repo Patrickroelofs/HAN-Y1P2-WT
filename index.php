@@ -29,11 +29,17 @@
 		<section id="projects">
 			<div class="container container--large">
 				<div class="projects">
+
                     <div class="projects__column">
                     <?php
                         $limitProjects = 3;
                         include('imports/projects.php');
                     ?>
+                        <div class="projectthumb__textblock">
+                            <h3>Projects</h3>
+                            <p>I got loads more projects that i’ve done, come check em out!</p>
+                            <a class="button button--green" href="projects.html">View more cool projects.</a>
+                        </div>
                     </div>
 				</div>
 			</div>
