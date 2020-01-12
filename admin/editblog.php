@@ -56,6 +56,8 @@
             </div>
         </fieldset>
     </form>
+
+    <?php include('imports/editTutorial.php'); ?>
 </main>
 
 <?php include('imports/footer.php'); ?>

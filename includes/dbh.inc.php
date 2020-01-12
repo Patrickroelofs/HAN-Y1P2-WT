@@ -11,8 +11,8 @@ try {
     $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     /* Stop XSS input and output */
-    $_GET = filter_input_array(INPUT_GET, FILTER_SANITIZE_STRING);
-    $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+    $_GET = filter_input_array(INPUT_GET, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
 } catch (PDOException $e) {
 

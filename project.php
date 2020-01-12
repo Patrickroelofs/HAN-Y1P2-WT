@@ -31,7 +31,14 @@
 
 	<main class="project">
 		<div class="container container--small">
-            <?= $result['content']; ?>
+            <?php
+            $data = $result['content'];
+            $newData = explode('\n', $data);
+
+            foreach($newData as $one){
+                echo '<p>'.$one.'</p>';
+            };
+            ?>
 		</div>
 	</main>
 
