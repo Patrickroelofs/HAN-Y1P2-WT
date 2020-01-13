@@ -30,15 +30,14 @@
 </header>
 
 <main class="project">
-    <div class="container container--small">
-            <?php
-                $data = $result['content'];
-                $newData = explode('\n', $data);
+    <div class="container">
+        <?php
+            include('includes/customTextParser.inc.php');
+            $input = $result['content'];
+            $output = customTextParser($input);
 
-                foreach($newData as $one){
-                    echo '<p>'.$one.'</p>';
-                };
-            ?>
+            echo $output;
+        ?>
     </div>
 </main>
 

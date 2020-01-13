@@ -1,48 +1,47 @@
 <?php
-    include 'includes/dbh.inc.php';
+include 'includes/dbh.inc.php';
 
-    $stmt = $connection->prepare("SELECT * FROM projects WHERE id = '{$_GET['project']}'");
-    $stmt->execute();
+$stmt = $connection->prepare("SELECT * FROM projects WHERE id = '{$_GET['project']}'");
+$stmt->execute();
 
-    $result = $stmt->fetch(PDO::FETCH_ASSOC);
+$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    $thisPage = 'Project';
+$thisPage = 'Project';
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <title><?= $result['title']; ?> | Patrick Roelofs</title>
-	<?php include('imports/head.php'); ?>
+    <?php include('imports/head.php'); ?>
 </head>
 
 <body>
-	<?php include('imports/navigation.php'); ?>
+<?php include('imports/navigation.php'); ?>
 
-	<header class="header">
-		<div class="container container--large center">
-			<div class="header__blocktext">
+<header class="header">
+    <div class="container container--large center">
+        <div class="header__blocktext">
 
-				<h2><?= $result["title"]; ?></h2>
+            <h2><?= $result["title"]; ?></h2>
 
-			</div>
-		</div>
-	</header>
+        </div>
+    </div>
+</header>
 
-	<main class="project">
-		<div class="container container--small">
-            <?php
-            $data = $result['content'];
-            $newData = explode('\n', $data);
+<main class="project">
+    <div class="container container--small">
+        <?php
+            include('includes/customTextParser.inc.php');
+            $input = $result['content'];
+            $output = customTextParser($input);
 
-            foreach($newData as $one){
-                echo '<p>'.$one.'</p>';
-            };
-            ?>
-		</div>
-	</main>
+            echo $output;
+        ?>
+    </div>
+</main>
 
-	<?php include('imports/footer.php'); ?>
+<?php include('imports/footer.php'); ?>
 
 </body>
 
