@@ -26,7 +26,7 @@
             <ul>
                 <li><a href="home.php" class="<?php if($thisPage == 'AdminHome'){ echo 'active'; } ?>">Home</a></li>
                 <li><a href="projects.php" class="<?php if($thisPage == 'AdminProjects' || $thisPage == 'AdminAddProject' || $thisPage == 'AdminEditProject'){ echo 'active'; } ?>">Projects</a></li>
-                <li><a href="blog.php" class="<?php if($thisPage == 'AdminBlog' || $thisPage == 'AdminAddBlog'){ echo 'active'; } ?>">Blog</a></li>
+                <li><a href="blog.php" class="<?php if($thisPage == 'AdminBlog' || $thisPage == 'AdminAddBlog' || $thisPage == 'AdminEditBlog'){ echo 'active'; } ?>">Blog</a></li>
                 <li><a href="messages.php" class="<?php if($thisPage == 'AdminMessages' || $thisPage == 'AdminViewMessage'){ echo 'active'; } ?>">Messages</a></li>
                 <li><a href="setup.php" class="<?php if($thisPage == 'AdminSetup'){ echo 'active'; } ?>">Setup</a></li>
             </ul>
