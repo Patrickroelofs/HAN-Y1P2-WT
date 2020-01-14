@@ -4,16 +4,18 @@
 //======================================================================
 ?>
 <?php
-
-session_start();
-$accountExists = false;
+    include('../includes/dbh.inc.php');
+    session_start();
 
 if (isset($_SESSION['uid'])) {
     header('Location: home.php');
     exit();
 }
 
-if ($accountExists == true) {
+$stmt = $connection->prepare("SELECT * FROM admins");
+$stmt->execute();
+
+if($stmt->rowCount() > 0){
     header("Location: home.php");
     exit();
 }
