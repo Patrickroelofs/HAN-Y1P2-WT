@@ -1,4 +1,9 @@
 <?php
+//======================================================================
+// Patrick Roelofs | 584025
+//======================================================================
+?>
+<?php
 
     $stmt = $connection->prepare('SELECT * FROM messages ORDER BY date DESC');
     $stmt->execute();

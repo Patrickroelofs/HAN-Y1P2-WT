@@ -1,4 +1,9 @@
 <?php
+//======================================================================
+// Patrick Roelofs | 584025
+//======================================================================
+?>
+<?php
 include 'includes/dbh.inc.php';
 
 $stmt = $connection->prepare("SELECT * FROM projects WHERE id = '{$_GET['project']}'");

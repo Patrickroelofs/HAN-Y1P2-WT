@@ -1,3 +1,8 @@
+<?php
+//======================================================================
+// Patrick Roelofs | 584025
+//======================================================================
+?>
 <?php include 'includes/adminBar.inc.php'; ?>
 <nav>
     <div class="container container--large nav">

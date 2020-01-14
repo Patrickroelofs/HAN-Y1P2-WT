@@ -1,6 +1,11 @@
 <?php
-include('includes/sessionChecker.inc.php');
-$thisPage = 'AdminAddBlog';
+//======================================================================
+// Patrick Roelofs | 584025
+//======================================================================
+?>
+<?php
+    include('includes/sessionChecker.inc.php');
+    $thisPage = 'AdminAddBlog';
 ?>
 
 <!DOCTYPE html>
