@@ -5,7 +5,7 @@
 ?>
 <?php
 
-$stmt = $connection->prepare('SELECT * FROM projects');
+$stmt = $connection->prepare('SELECT * FROM projects ORDER BY id DESC');
 $stmt->execute();
 
 $i = 0;

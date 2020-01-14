@@ -32,22 +32,22 @@
 		<fieldset>
 			<div>
 				<label>Title</label>
-				<input name="title" type="text" value="<?= $result['title']; ?>">
+				<input name="title" type="text" required value="<?= $result['title']; ?>">
 			</div>
 
 			<div>
 				<label>Tags</label>
-				<input name="tags" type="text" value="<?= $result['tags']; ?>">
+				<input name="tags" type="text" required value="<?= $result['tags']; ?>">
 			</div>
 
 			<div>
 				<label>Date</label>
-				<input name="date" type="date" value="<?= $result['date']; ?>">
+				<input name="date" type="date" required value="<?= $result['date']; ?>">
 			</div>
 
 			<div>
 				<label>Description</label>
-				<input name="description" type="text" value="<?= $result['description']; ?>">
+				<input name="description" type="text" required value="<?= $result['description']; ?>">
 			</div>
 
 			<div>

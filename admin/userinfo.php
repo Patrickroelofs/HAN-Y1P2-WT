@@ -39,22 +39,22 @@
     <form id="edituser" action="includes/register.inc.php" method="POST">
         <div>
             <label>Username</label>
-            <input name="uid" type="text" value="<?php echo $result['username']; ?>">
+            <input name="uid" type="text" value="<?php echo $result['username']; ?>" required>
         </div>
 
         <div>
             <label>Email</label>
-            <input name="email" type="email" value="<?php echo $result['email']; ?>">
+            <input name="email" type="email" value="<?php echo $result['email']; ?>" required>
         </div>
 
         <div>
             <label>Password</label>
-            <input name="pwd" type="password">
+            <input name="pwd" type="password" required>
         </div>
 
         <div>
             <label>re-type Password</label>
-            <input name="pwd-repeat" type="password">
+            <input name="pwd-repeat" type="password" required>
         </div>
 
         <div class="center">

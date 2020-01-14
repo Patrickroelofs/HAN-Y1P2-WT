@@ -24,22 +24,22 @@
         <fieldset>
             <div>
                 <label>Title</label>
-                <input name="title" type="text">
+                <input name="title" type="text" required>
             </div>
 
             <div>
                 <label>Tags</label>
-                <input name="tags" type="text">
+                <input name="tags" type="text" required>
             </div>
 
             <div>
                 <label>Date</label>
-                <input name="date" type="date">
+                <input name="date" type="date" required>
             </div>
 
             <div>
                 <label>Description</label>
-                <input name="description" type="text">
+                <input name="description" type="text" required>
             </div>
 
             <div>

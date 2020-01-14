@@ -46,22 +46,22 @@ if($stmt->rowCount() > 0){
         <fieldset>
             <div>
                 <label>Username</label>
-                <input name="uid" type="text" value="<?php if(empty($_GET['username'])){} else { echo $_GET['username']; } ?>">
+                <input name="uid" type="text" required value="<?php if(empty($_GET['username'])){} else { echo $_GET['username']; } ?>">
             </div>
 
             <div>
                 <label>Email</label>
-                <input name="email" type="email" value="<?php if(empty($_GET['email'])){} else { echo $_GET['email']; } ?>">
+                <input name="email" type="email" required value="<?php if(empty($_GET['email'])){} else { echo $_GET['email']; } ?>">
             </div>
 
             <div>
                 <label>Password</label>
-                <input name="pwd" type="password">
+                <input name="pwd" type="password" required>
             </div>
 
             <div>
                 <label>re-type Password</label>
-                <input name="pwd-repeat" type="password">
+                <input name="pwd-repeat" type="password" required>
             </div>
 
             <div class="center">

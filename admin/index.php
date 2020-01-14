@@ -35,12 +35,12 @@ if (isset($_SESSION['uid'])) {
         <fieldset>
             <div>
                 <label>Username</label>
-                <input name="login-uid" type="text" value="<?php if(empty($_GET['username'])){} else { echo $_GET['username']; } ?>">
+                <input name="login-uid" type="text" required value="<?php if(empty($_GET['username'])){} else { echo $_GET['username']; } ?>">
             </div>
 
             <div>
                 <label>Password</label>
-                <input name="login-pwd" type="password">
+                <input name="login-pwd" type="password" required>
             </div>
 
             <div class="center">

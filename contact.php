@@ -45,11 +45,11 @@
 								</div>
 								<div>
 									<label for="email">Email Address</label>
-									<input name="email" id="email" type="email" placeholder="Your awkward email address">
+									<input name="email" id="email" type="email" required placeholder="Your awkward email address">
 								</div>
 								<div>
 									<label for="subject">Subject</label>
-									<input name="subject" id="subject" type="text" placeholder="A catchy title">
+									<input name="subject" id="subject" type="text" required placeholder="A catchy title">
 								</div>
 							</div>
 							<div>

@@ -5,7 +5,7 @@
 ?>
 <?php
 
-$stmt = $connection->prepare('SELECT * FROM blog');
+$stmt = $connection->prepare('SELECT * FROM blog ORDER BY id DESC');
 $stmt->execute();
 
 $i = 0;
