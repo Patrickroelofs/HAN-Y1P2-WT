@@ -24,15 +24,27 @@
 <main class="container container--large">
     <h1>Edit Account</h1>
 
+    <?php
+
+        $stmt = $connection->prepare("SELECT * FROM admins WHERE username = :username OR email = :email");
+        $stmt->execute(array(
+                ':username' => $_SESSION['uid'],
+                ':email' => $_SESSION['uid']
+        ));
+
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    ?>
+
     <form id="edituser" action="includes/register.inc.php" method="POST">
         <div>
             <label>Username</label>
-            <input name="uid" type="text" value="<?php if(empty($_GET['username'])){} else { echo $_GET['username']; } ?>">
+            <input name="uid" type="text" value="<?php echo $result['username']; ?>">
         </div>
 
         <div>
             <label>Email</label>
-            <input name="email" type="email" value="<?php if(empty($_GET['email'])){} else { echo $_GET['email']; } ?>">
+            <input name="email" type="email" value="<?php echo $result['email']; ?>">
         </div>
 
         <div>
