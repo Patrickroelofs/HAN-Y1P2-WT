@@ -56,10 +56,10 @@
                                             <?php
                                         }
                                     } else {
-                                        echo 'error';
+                                        echo "<div class='warning warning--floating'><p>Nothing was found on that searchterm.</p></div>";
                                     }
                                 } else {
-                                    echo 'error';
+                                    echo "<div class='warning warning--floating'><p>Nothing was found on that searchterm.</p></div>";
                                 }
                             } else {
                                 $limitBlogitems = 999;

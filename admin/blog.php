@@ -18,7 +18,7 @@
 
 <main class="container container--large">
     <a href="addblog.php">+ Add a Blog item</a>
-    <div>
+    <div class="projects__column">
         <?php
             $limitBlog = 999;
             include ('imports/blogitems.php');

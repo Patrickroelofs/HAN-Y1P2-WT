@@ -157,7 +157,7 @@ hr{
 	font-size: 0.8em;
 }
 .message h3{
-	padding-bottom: 16px;
+	padding: 16px 0;
 }
 .message hr{
 	margin: 16px 0;
@@ -276,7 +276,6 @@ button:hover {
 .projectthumb {
 	display: inline-block;
 	margin: 12px 0;
-	width: calc(50% - 12px);
 }
 
 .projectthumb figure{
