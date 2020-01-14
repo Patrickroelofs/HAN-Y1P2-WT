@@ -8,6 +8,20 @@
     $stmt->execute();
 
     $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    if(isset($_POST['deletemessage-submit'])) {
+        try{
+
+            $stmt = $connection->prepare("DELETE FROM messages WHERE id = '{$_GET['message']}'");
+            $stmt->execute();
+
+            header("Location: messages.php?=deleted");
+            exit();
+
+        } catch(PDOException $e){
+            echo $e->getMessage();
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -28,6 +42,11 @@
 
     <p><?= $result['content']; ?></p>
     <a href="mailto: <?= $result['email']; ?>"><?= $result['email']; ?></a>
+    <form id="deletemessage" action="viewmessage.php?message=<?= $_GET['message'] ?>" method="POST">
+        <div class="center">
+            <button name="deletemessage-submit" class="button" type="submit">Delete Message</button>
+        </div>
+    </form>
 </main>
 
 <?php include('imports/footer.php'); ?>
