@@ -4,7 +4,7 @@
 //======================================================================
 ?>
 <?php
-    include 'includes/dbh.inc.php';
+    require 'includes/dbh.inc.php';
 
     $stmt = $connection->prepare("SELECT * FROM blog WHERE id = '{$_GET['blogitem']}'");
     $stmt->execute();

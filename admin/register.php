@@ -4,7 +4,7 @@
 //======================================================================
 ?>
 <?php
-    include('../includes/dbh.inc.php');
+    require('../includes/dbh.inc.php');
     session_start();
 
 if (isset($_SESSION['uid'])) {

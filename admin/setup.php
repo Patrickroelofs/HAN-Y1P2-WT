@@ -4,10 +4,10 @@
 //======================================================================
 ?>
 <?php
-include '../includes/dbh.inc.php';
+require '../includes/dbh.inc.php';
 
 // Check if user is logged in
-include('includes/sessionChecker.inc.php');
+require('includes/sessionChecker.inc.php');
 $thisPage = 'AdminSetup';
 
 // Get filled in data from database

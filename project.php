@@ -4,7 +4,7 @@
 //======================================================================
 ?>
 <?php
-include 'includes/dbh.inc.php';
+require 'includes/dbh.inc.php';
 
 $stmt = $connection->prepare("SELECT * FROM projects WHERE id = '{$_GET['project']}'");
 $stmt->execute();

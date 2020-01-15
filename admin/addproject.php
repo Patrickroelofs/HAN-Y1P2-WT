@@ -4,7 +4,7 @@
 //======================================================================
 ?>
 <?php
-    include('includes/sessionChecker.inc.php');
+    require('includes/sessionChecker.inc.php');
     $thisPage = 'AdminAddProject';
 ?>
 

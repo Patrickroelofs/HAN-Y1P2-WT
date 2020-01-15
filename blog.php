@@ -4,7 +4,7 @@
 //======================================================================
 ?>
 <?php
-    include 'includes/dbh.inc.php';
+    require 'includes/dbh.inc.php';
     $thisPage = 'Blog';
 ?>
 <!DOCTYPE html>
