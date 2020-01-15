@@ -42,11 +42,11 @@
 
 <main class="container container--large viewmessage">
     <a href="messages.php">Return to all messages</a>
-    <h1><?= $result['subject']; ?></h1>
+    <h2><?= $result['subject']; ?></h2>
     <em><?= $result['date']; ?> | <?= $result['name']; ?></em>
 
     <p><?= $result['content']; ?></p>
-    <a href="mailto: <?= $result['email']; ?>"><?= $result['email']; ?></a>
+    <a href="mailto:<?= $result['email']; ?>"><?= $result['email']; ?></a>
     <form id="deletemessage" action="viewmessage.php?message=<?= $_GET['message'] ?>" method="POST">
         <div class="center">
             <button name="deletemessage-submit" class="button" type="submit">Delete Message</button>

@@ -22,7 +22,7 @@
 <?php include('imports/navigation.php'); ?>
 
 <main class="container container--large">
-    <h1>Edit Account</h1>
+    <h2>Edit Account</h2>
 
     <?php
 

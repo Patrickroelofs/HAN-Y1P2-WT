@@ -27,7 +27,7 @@ function customTextParser($content)
         0 => '<b>$1</b>',
         1 => '<i>$1</i>',
         2 => '<a href="$1" target="_blank">$1</a>',
-        3 => '<img src="$1">',
+        3 => '<img src="$1" alt="$1">',
         4 => '<p>$1</p>',
         5 => '<h1>$1</h1>',
         6 => '<h2>$1</h2>',
