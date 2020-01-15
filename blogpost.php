@@ -22,6 +22,7 @@
 </head>
 
 <body>
+<?php include 'includes/adminBar.inc.php'; ?>
 <?php include('imports/navigation.php'); ?>
 
 <header class="header">

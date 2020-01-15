@@ -3,7 +3,7 @@
 // Patrick Roelofs | 584025 | 16/01/2020
 //======================================================================
 ?>
-<?php include 'includes/adminBar.inc.php'; ?>
+
 <nav>
     <div class="container container--large nav">
         <input class="nav--icon" type="checkbox" id="menu-btn"/>
