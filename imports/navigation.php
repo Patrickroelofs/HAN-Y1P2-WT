@@ -17,17 +17,17 @@
             </svg>
         </label>
         <div class="nav__logo">
-            <a href="index.php">
+            <a href="<?php if($thisPage = 'error') {echo '/'; } ?>index.php">
                 <h1>Patrick Roelofs</h1>
             </a>
         </div>
         <div class="nav__navigation">
             <ul>
-                <li><a href="index.php" class="nav__link <?php if ($thisPage == 'Home') echo 'nav--active' ?>">Home</a></li>
-                <li><a href="about.php" class="nav__link <?php if ($thisPage == "About") echo "nav--active"; ?>">About</a></li>
-                <li><a href="projects.php" class="nav__link <?php if ($thisPage == 'Projects' || $thisPage == 'Project') echo 'nav--active' ?>">Projects</a></li>
-                <li><a href="blog.php" class="nav__link <?php if ($thisPage == 'Blog' || $thisPage == 'BlogPost') echo 'nav--active' ?>">Blog</a></li>
-                <li><a href="contact.php" class="nav__link <?php if ($thisPage == 'Contact') echo 'nav--active' ?>">Contact</a></li>
+                <li><a href="<?php if($thisPage = 'error') {echo '/'; } ?>index.php" class="nav__link <?php if ($thisPage == 'Home') echo 'nav--active' ?>">Home</a></li>
+                <li><a href="<?php if($thisPage = 'error') {echo '/'; } ?>about.php" class="nav__link <?php if ($thisPage == "About") echo "nav--active"; ?>">About</a></li>
+                <li><a href="<?php if($thisPage = 'error') {echo '/'; } ?>projects.php" class="nav__link <?php if ($thisPage == 'Projects' || $thisPage == 'Project') echo 'nav--active' ?>">Projects</a></li>
+                <li><a href="<?php if($thisPage = 'error') {echo '/'; } ?>blog.php" class="nav__link <?php if ($thisPage == 'Blog' || $thisPage == 'BlogPost') echo 'nav--active' ?>">Blog</a></li>
+                <li><a href="<?php if($thisPage = 'error') {echo '/'; } ?>contact.php" class="nav__link <?php if ($thisPage == 'Contact') echo 'nav--active' ?>">Contact</a></li>
             </ul>
         </div>
     </div>
